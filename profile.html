@@ -40,48 +40,36 @@
             <img src="./assets/logo.png" width="45" alt="" />
           </a>
         </div>
-        <div class="px-4 border-r">
-          <a href="./announcements.html" class="hover rounded px-2">Home</a>
+        <div class="border-r text-left">
+          <a href="./announcements.html" class="hover pr-4 px-2">Home</a>
         </div>
-        <div class="px-4 border-r">
-          <a href="./my-hours.html" class="hover rounded px-2">My Hours</a>
+        <div class="border-r text-left">
+          <a href="./my-hours.html" class="hover pr-4 px-2">My Hours</a>
         </div>
-        <div class="px-4 border-r">
-          <a href="./submit-hours.html" class="hover rounded px-2">
+        <div class="border-r text-left">
+          <a href="./submit-hours.html" class="hover pr-4 px-2">
             Submit Hours</a
           >
         </div>
-        <div class="px-4 border-r">
-          <span class="hover rounded px-2"> Outreach Sign-Up </span>
+        <div class="border-r">
+          <span class="hover pr-4 px-2"> Outreach Sign-Up </span>
         </div>
-        <div class="px-2 border-r relative tooltips">
-          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
-            Leadership
-          </div>
+        <div class="border-r relative tooltips">
+          <div class="px-2 pr-4 cursor-pointer" id="leadership">Leadership</div>
           <span
             class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
           >
             <ul>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Team Tracker
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Evaluation
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Reports
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Settings
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Outreach
-              </li>
+              <li class="border-b border-green-600 py-1 hover">Team Tracker</li>
+              <li class="border-b border-green-600 py-1 hover">Evaluation</li>
+              <li class="border-b border-green-600 py-1 hover">Reports</li>
+              <li class="border-b border-green-600 py-1 hover">Settings</li>
+              <li class="border-b border-green-600 py-1 hover">Outreach</li>
             </ul>
           </span>
         </div>
-        <div class="px-4">
-          <span class="hover rounded px-2"> Admin </span>
+        <div class="">
+          <span class="hover px-2 pr-4"> Admin </span>
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
@@ -95,13 +83,13 @@
     </nav>
     <div class="p-4 px-8">
       <h2 class="text-primary">Profile</h2>
-      <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-        <div class="font-bold">Student Name</div>
+      <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="font-bold w-70 w-64">Student Name</div>
         <div>Joy Uehara</div>
       </div>
       <form onsubmit="return submitProfile()" method="POST">
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Primary Directorate<span class="text-red-500"> *</span>
           </div>
           <select
@@ -114,8 +102,8 @@
             <option value="second">second</option>
           </select>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Current School<span class="text-red-500"> *</span>
           </div>
           <select
@@ -128,8 +116,8 @@
             <option value="second">second</option>
           </select>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Current Grade<span class="text-red-500"> *</span>
           </div>
           <select
@@ -142,8 +130,8 @@
             <option value="second">second</option>
           </select>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Current GPA<span class="text-red-500"> *</span>
           </div>
           <input
@@ -154,8 +142,8 @@
             class="border-b border-green-600 w-64"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             School in Eighth Grade<span class="text-red-500"> *</span>
           </div>
           <input
@@ -165,11 +153,11 @@
             class="border-b border-green-600 w-64"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1">
           <div class="h-4"></div>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Personal Email<span class="text-red-500"> *</span>
           </div>
           <input
@@ -179,8 +167,8 @@
             class="border-b border-green-600 w-64"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Cell Phone Number<span class="text-red-500"> *</span>
           </div>
           <input
@@ -191,18 +179,16 @@
             id="cellPhone"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
-            Home Phone Number<span class="text-red-500"> *</span>
-          </div>
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">Home Phone Number</div>
           <input
             type="tel"
             id="homePhone"
             class="border-b border-green-600 w-64"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Address<span class="text-red-500"> *</span>
           </div>
           <div class="w-64 flex overflow-hidden">
@@ -222,8 +208,8 @@
             />
           </div>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div></div>
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="w-70"></div>
           <div class="w-64 flex overflow-hidden">
             <input
               type="text"
@@ -240,8 +226,8 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Birthdate<span class="text-red-500"> *</span>
           </div>
           <div class="input-container w-64">
@@ -253,8 +239,8 @@
             />
           </div>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Gender<span class="text-red-500"> *</span>
           </div>
           <select
@@ -269,8 +255,8 @@
             <option value="Withheld">Prefer not to answer</option>
           </select>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Main Race<span class="text-red-500"> *</span>
           </div>
           <select
@@ -292,8 +278,8 @@
             <option value="Withheld">Prefer not to answer</option>
           </select>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">
             Ethnicity<span class="text-red-500"> *</span>
           </div>
           <select
@@ -307,114 +293,171 @@
             <option value="Withheld">Prefer not to answer</option>
           </select>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">Dietary Restrictions</div>
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">Dietary Restrictions</div>
           <input
             type="text"
             class="border-b border-green-600 w-64"
             id="dietaryRestrictions"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">Health and Safety Considerations</div>
+        <div class="flex border-b border-gray-300 my-1 py-1">
+          <div class="font-bold w-70">Health and Safety Considerations</div>
           <input
             type="text"
             class="border-b border-green-600 w-64"
             id="dietaryRestrictions"
           />
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
+        <div class="flex border-b border-gray-300 my-1 py-1 items-center">
+          <div class="font-bold w-70">
             Consent for Handbook<span class="text-red-500"> *</span>
           </div>
-          <select
-            name="studentConsent"
-            required
-            class="w-64 border-b border-green-600"
-            id="studentConsent"
-          >
-            <option value="Yes">I consent</option>
-            <option value="No">I do not consent</option>
-          </select>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label for="yesConsent" class="m-0">
+              <input
+                type="radio"
+                name="studentConsent"
+                value="I Consent"
+                id="yesConsent"
+              />
+              I consent
+            </label>
+            <label for="noConsent" class="m-0">
+              <input
+                type="radio"
+                name="studentConsent"
+                value="No Consent"
+                id="noConsent"
+              />
+              I do not consent
+            </label>
+          </div>
         </div>
-        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1">
           <div class="h-4"></div>
         </div>
-        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">Parent / Guardian 1</div>
-          <div></div>
-          <div class="font-bold">Parent / Guardian 2</div>
-        </div>
-        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">Name<span class="text-red-500"> *</span></div>
-          <input
-            type="text"
-            id="parent1Name"
-            required
-            class="border-b border-green-600 w-64"
-          />
-
-          <div class="font-bold">Name</div>
-          <input
-            type="text"
-            id="parent2Name"
-            class="border-b border-green-600 w-64"
-          />
-        </div>
-        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">Email<span class="text-red-500"> *</span></div>
-          <input
-            type="email"
-            required
-            id="parent1Email"
-            class="border-b border-green-600 w-64"
-          />
-          <div class="font-bold">Email</div>
-          <input
-            type="email"
-            id="parent2Email"
-            class="border-b border-green-600 w-64"
-          />
-        </div>
-        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
-            Phone Number<span class="text-red-500"> *</span>
+        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+          <div>
+            <div class="font-bold w-70">Parent / Guardian 1</div>
+            <div></div>
           </div>
-          <input
-            type="tel"
-            id="parent1Phone"
-            required
-            class="border-b border-green-600 w-64"
-          />
-          <div class="font-bold">Phone Number</div>
-          <input
-            type="tel"
-            id="parent2Phone"
-            class="border-b border-green-600 w-64"
-          />
-        </div>
-        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
-          <div class="font-bold">
-            Consent for Handbook<span class="text-red-500"> *</span>
+          <div>
+            <div class="font-bold w-70">Parent / Guardian 2</div>
           </div>
-          <select
-            name="parent1Consent"
-            required
-            class="w-64 border-b border-green-600"
-            id="parent1Consent"
-          >
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-          <div class="font-bold">Consent for Handbook</div>
-          <select
-            name="parent2Consent"
-            class="w-64 border-b border-green-600"
-            id="parent2Consent"
-          >
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+        </div>
+        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+          <div class="flex">
+            <div class="font-bold w-70">
+              Name<span class="text-red-500"> *</span>
+            </div>
+            <input
+              type="text"
+              id="parent1Name"
+              required
+              class="border-b border-green-600 w-64"
+            />
+          </div>
+          <div class="flex">
+            <div class="font-bold w-70">Name</div>
+            <input
+              type="text"
+              id="parent2Name"
+              class="border-b border-green-600 w-64"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+          <div class="flex">
+            <div class="font-bold w-70">
+              Email<span class="text-red-500"> *</span>
+            </div>
+            <input
+              type="email"
+              required
+              id="parent1Email"
+              class="border-b border-green-600 w-64"
+            />
+          </div>
+          <div class="flex">
+            <div class="font-bold w-70">Email</div>
+            <input
+              type="email"
+              id="parent2Email"
+              class="border-b border-green-600 w-64"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+          <div class="flex">
+            <div class="font-bold w-70">
+              Phone Number<span class="text-red-500"> *</span>
+            </div>
+            <input
+              type="tel"
+              id="parent1Phone"
+              required
+              class="border-b border-green-600 w-64"
+            />
+          </div>
+          <div class="flex">
+            <div class="font-bold w-70">Phone Number</div>
+            <input
+              type="tel"
+              id="parent2Phone"
+              class="border-b border-green-600 w-64"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+          <div class="flex">
+            <div class="font-bold w-70">
+              Consent for Handbook<span class="text-red-500"> *</span>
+            </div>
+            <div class="grid grid-cols-2 w-70 text-sm">
+              <label for="yesConsent" class="m-0">
+                <input
+                  type="radio"
+                  name="studentConsent"
+                  value="I Consent"
+                  id="yesConsent"
+                />
+                I consent
+              </label>
+              <label for="noConsent" class="m-0">
+                <input
+                  type="radio"
+                  name="studentConsent"
+                  value="No Consent"
+                  id="noConsent"
+                />
+                I do not consent
+              </label>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="font-bold w-70">Consent for Handbook</div>
+            <div class="grid grid-cols-2 w-70 text-sm">
+              <label for="yesConsent" class="m-0">
+                <input
+                  type="radio"
+                  name="studentConsent"
+                  value="I Consent"
+                  id="yesConsent"
+                />
+                I consent
+              </label>
+              <label for="noConsent" class="m-0">
+                <input
+                  type="radio"
+                  name="studentConsent"
+                  value="No Consent"
+                  id="noConsent"
+                />
+                I do not consent
+              </label>
+            </div>
+          </div>
         </div>
         <div class="text-sm text-red-500">
           (Fields marked with * are required)
@@ -424,7 +467,7 @@
             type="submit"
             class="rounded my-4 bg-primary px-4 py-1 text-white font-bold"
           >
-            Save
+            SAVE
           </button>
         </div>
       </form>

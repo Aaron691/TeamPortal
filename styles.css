@@ -70,14 +70,16 @@ h3 {
 }
 
 a:hover {
-  color: #116625;
-  background-color: black;
+  background-color: #116625;
+  color: white;
 }
+
 button.bg-primary:hover,
 button.bg-primary:focus,
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: black !important;
+  background-color: rgb(170, 170, 170) !important;
+  color: #116625 !important;
 }
 
 .input-container input {
@@ -98,4 +100,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 0;
   top: 0;
   width: auto;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.w-42 {
+  width: 11rem;
+}
+
+.w-70 {
+  width: 17rem;
+}
+
+.g-recaptcha div {
+  margin: 0 auto;
 }

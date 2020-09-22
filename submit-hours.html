@@ -7,7 +7,7 @@
     <title>Robotics</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="stylesheet"
@@ -40,48 +40,36 @@
             <img src="./assets/logo.png" width="45" alt="" />
           </a>
         </div>
-        <div class="px-4 border-r">
-          <a href="./announcements.html" class="hover rounded px-2">Home</a>
+        <div class="border-r text-left">
+          <a href="./announcements.html" class="hover pr-4 px-2">Home</a>
         </div>
-        <div class="px-4 border-r">
-          <a href="./my-hours.html" class="hover rounded px-2">My Hours</a>
+        <div class="border-r text-left">
+          <a href="./my-hours.html" class="hover pr-4 px-2">My Hours</a>
         </div>
-        <div class="px-4 border-r">
-          <a href="./submit-hours.html" class="hover rounded px-2">
+        <div class="border-r text-left">
+          <a href="./submit-hours.html" class="hover pr-4 px-2">
             Submit Hours</a
           >
         </div>
-        <div class="px-4 border-r">
-          <span class="hover rounded px-2"> Outreach Sign-Up </span>
+        <div class="border-r">
+          <span class="hover pr-4 px-2"> Outreach Sign-Up </span>
         </div>
-        <div class="px-2 border-r relative tooltips">
-          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
-            Leadership
-          </div>
+        <div class="border-r relative tooltips">
+          <div class="px-2 pr-4 cursor-pointer" id="leadership">Leadership</div>
           <span
             class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
           >
             <ul>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Team Tracker
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Evaluation
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Reports
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Settings
-              </li>
-              <li class="border-b border-green-600 py-1 hover rounded">
-                Outreach
-              </li>
+              <li class="border-b border-green-600 py-1 hover">Team Tracker</li>
+              <li class="border-b border-green-600 py-1 hover">Evaluation</li>
+              <li class="border-b border-green-600 py-1 hover">Reports</li>
+              <li class="border-b border-green-600 py-1 hover">Settings</li>
+              <li class="border-b border-green-600 py-1 hover">Outreach</li>
             </ul>
           </span>
         </div>
-        <div class="px-4">
-          <span class="hover rounded px-2"> Admin </span>
+        <div class="">
+          <span class="hover px-2 pr-4"> Admin </span>
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
@@ -100,58 +88,53 @@
       <form action="" class="md:grid grid-cols-3 gap-8 text-primary">
         <label for="date" class="flex flex-col" class="text-primary">
           Date
-          <div class="input-container">
-          <input
-            type="date"
-            required
-            id="datePicker"
-            class="getdate border-b  border-green-600"
-          />
-        </div>
+          <span class="input-container">
+            <input
+              type="date"
+              required
+              id="datePicker"
+              class="getdate border-b border-green-600"
+            />
+          </span>
         </label>
-        <label for="startTime" class="flex flex-col" class="text-primary">
+        <label for="startTime" class="flex flex-col text-primary">
           Start Time
-          <div class="input-container">
+          <span class="input-container">
             <input
               type="time"
               required
               id="startTime"
               class="gettime border-b border-green-600"
             />
-          </div>
+          </span>
         </label>
-        <label for="endTime" class="flex flex-col" class="text-primary">
+        <label for="endTime" class="flex flex-col text-primary">
           End Time
-          <div class="input-container">
+          <span class="input-container">
             <input
               type="time"
               required
               id="endTime"
-              class="gettime border-b  border-green-600"
+              class="gettime border-b border-green-600"
             />
-          </div>
+          </span>
         </label>
-        <label for="hoursType" class="flex flex-col" class="text-primary">
+        <label for="hoursType" class="flex flex-col text-primary">
           Hours Type
-          <input
-            type="text"
-            required
-            id="hoursType"
-            class="border-b  border-green-600"
-          />
+          <select name="" id="hoursType" class="border-b border-green-600">
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+          </select>
         </label>
-        <label
-          for="hoursMemo"
-          class="flex flex-col col-span-2"
-          class="text-primary"
-        >
+        <label for="hoursMemo" class="flex flex-col col-span-2 text-primary">
           Hours Description
           <input
             type="text"
             required
             placeholder="Description of Hours (Mandatory for Work at Home and Outreach)"
             id="hoursMemo"
-            class="border-b  border-green-600"
+            class="border-b border-green-600"
           />
         </label>
         <div class="col-span-3 text-center my-8">
@@ -164,21 +147,5 @@
 
     <footer></footer>
     <script src="./scripts.js"></script>
-    </script>
-    <style>
-   
-    input[type="time"]::-webkit-calendar-picker-indicator {
-      background: transparent;
-      bottom: 0;
-      color: transparent;
-      cursor: pointer;
-      height: auto;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: auto;
-    }
-    </style>
   </body>
 </html>
