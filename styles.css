@@ -126,3 +126,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .g-recaptcha div {
   margin: 0 auto;
 }
+
+.h-15 {
+  height: 4rem;
+}
