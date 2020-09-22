@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+          <div class="text-center"><img src="./assets/logo.png" class="mx-auto" width="250" alt="" /></div>
+          <h2 class="text-center text-primary">Register</h2>
+          <br />
+          <form action="">
+            <div class="flex flex-col">
+              <label for="name" class="text-primary">Full Name </label>
+              <div class="relative">
+                <i
+                  class="fa fa-user-o fa-2x absolute text-primary"
+                  style="margin: 5px"
+                ></i>
+                <input
+                  id="name"
+                  type="name"
+                  placeholder="Type your full name"
+                  class="border-b text-primary border-b pl-5 p-2 w-full"
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <label for="email" class="text-primary">Email</label>
+              <div class="relative">
+                <i
+                  class="fa fa-envelope-open-o fa-2x absolute text-primary"
+                  style="margin: 5px"
+                ></i>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Type your email"
+                  class="border-b text-primary border-b pl-5 p-2 w-full"
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <label for="password" class="text-primary">Password </label>
+              <div class="relative">
+                <i
+                  class="fa fa-lock fa-2x absolute text-primary m-1 px-1""
+                ></i>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Type your password"
+                  class="border-b text-primary border-b pl-5 p-2 w-full"
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <label for="confirmPassword" class="text-primary">
+                Confirm Password
+              </label>
+              <div class="relative">
+                <i class="fa fa-lock fa-2x absolute text-primary m-1 px-1"></i>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  placeholder="Type your password"
+                  class="border-b text-primary border-b pl-5 p-2 w-full"
+                />
+              </div>
+            </div>
+            <div class="g-reCAPTCHA" data-sitekey="your_site_key"></div>
+            <br />
+            <div class="text-center my-3">
+             
+              <div class="g-recaptcha" data-sitekey="6LcS9c4ZAAAAAPHISa63NZEj3TvZklqZqtY97p6s"></div>
+              <button class=" rounded bg-primary px-4 py-1 text-white font-bold text-center" 
+                submit>Register</button>
+              <br />
+              <span class="text-sm">
+                Or <a href="./index.html" class="underline">Login</a>
+              </span>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm"></div>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+      }
+    </script>
+
+  </body>
+</html>

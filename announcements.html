@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="w-full bg-gray-900 text-white relative">
+      <div class="w-full bg-primary h-3"></div>
+
+      <div
+        class="py-2 px-10 flex items-center justify-center relative h-20 text-sm lg:text-base"
+      >
+        <div class="bg-gray-900 absolute left-1 top-1">
+          <a href="./announcements.html">
+            <img src="./assets/logo.png" width="45" alt="" />
+          </a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./announcements.html" class="hover rounded px-2">Home</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./my-hours.html" class="hover rounded px-2">My Hours</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./submit-hours.html" class="hover rounded px-2">
+            Submit Hours</a
+          >
+        </div>
+        <div class="px-4 border-r">
+          <span class="hover rounded px-2"> Outreach Sign-Up </span>
+        </div>
+        <div class="px-2 border-r relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Team Tracker
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Evaluation
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Reports
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Settings
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Outreach
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="px-4">
+          <span class="hover rounded px-2"> Admin </span>
+        </div>
+      </div>
+      <div class="absolute right-1 top-1 flex">
+        <div class="border-r px-2 text-xs" id="userFirstName">
+          <a href="./profile.html"> Joy Uehara </a>
+        </div>
+        <div class="text-xs px-2">
+          <a href="./index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="p-8  md:grid grid-cols-7 gap-8">
+      <!-- Left Column -->
+      <div class="col-span-4 lg:col-span-5">
+          <!-- Beginning of Announcements -->
+        <div class="bg-gray-100 shadow rounded p-4 py-2">
+          <div class="flex items-center">
+            <div class="pr-2">
+              <i
+                class="fa fa-bullhorn text-primary fa-2x transform -rotate-45"
+              ></i>
+            </div>
+            <h2 class="text-primary">Announcements</h3>
+            <button class="ml-auto bg-primary my-3 flex items-center rounded-full text-white px-3">
+              <img src="./assets/slack.png" width="20" class="mr-1 -ml-1" alt="">
+                SLACK
+            </button>
+          </div>
+          <div id="announcements" class="overflow-y-auto" style="height:30rem;">
+            <!-- 
+              This data is generated in the function setData(); 
+            -->
+          </div>
+        </div>
+        <!-- End of Announcements -->
+        <div class=" bg-gray-100 shadow rounded p-4 my-4 py-2">
+        <!-- Beginning of Calendar -->
+        <div id="calendar" >
+          <div class="flex items-center">
+            <div class="pr-3">
+            <!-- Calendar Icon -->
+              <i class="fa fa-calendar text-primary fa-2x">
+              </i>
+            </div>
+            <h2 class="text-primary">Calendar</h2>
+            <button class="ml-auto bg-primary my-3 flex items-center rounded-full text-white px-3">
+              <img src="./assets/google.png" width="20" class="mr-1 -ml-1" alt="">
+                CALENDAR
+            </button>
+          </div>
+        <div id="events" class="">
+          <!-- 
+            this data is generated in the function setData(); data is being pulled from the file script.js
+          -->
+        </div>
+        <!-- End of Calendar -->
+      </div>
+    </div>
+     
+    </div>
+     <!-- Right column -->
+     <div class="col-span-3 lg:col-span-2 ">
+       <!-- Beginning of Summary -->
+        <div class=" bg-gray-100 shadow rounded px-2 py-4">
+          <div class="flex items-center text-primary">
+            <div class="pr-2">
+              <i class="fa fa-file fa-2x"></i>
+            </div>
+            <h2>Summary</h2>
+          </div>
+          <div class="text-sm -mt-4">
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3">Relevant Hours:</div>
+              <div class="col-span-2 text-red-500">62:00</div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Total Outreach Hours:</div>
+              <div class="col-span-2 text-green-500">15:00</div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Zoom Meetings:</div>
+              <div class="col-span-2 text-green-500">80%</div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Directorate Meetings:</div>
+              <div class="col-span-2 text-red-500">20%</div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1 h-8"></div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Handbook Consent Form:</div>
+              <div class="col-span-2 text-green-500">Yes</div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">FIRST Registration:</div>
+              <div class="col-span-2 text-orange-600">Sign Consent Form</div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Preseason Permission Slip:</div>
+              <div class="col-span-2 text-green-500"></div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1 h-8"></div>
+
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Competition Permission Slip:</div>
+              <div class="col-span-2 text-red-500"></div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Regional Eligibility:</div>
+              <div class="col-span-2 text-green-500"></div>
+            </div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1 h-8"></div>
+            <div class="grid grid-cols-5  border-b border-green-600 py-1">
+              <div class="col-span-3 ">Championships Eligibility:</div>
+              <div class="col-span-2 text-green-500"></div>
+            </div>
+          </div>
+      </div>
+      <!-- End of Summary -->
+
+      <!-- Helpful Links -->
+      <div class="my-4 bg-gray-100 shadow rounded p-2">
+        <div class="flex items-center  text-primary">
+          <div class="pr-2">
+            <i class="fa fa-link fa-2x"></i>
+          </div>
+          <h2>Helpful Links</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2  py-2 text-center flex   items-center">
+            <img src="./assets/slack.png" width="30" class="mx-2" alt="">
+            <div>
+              SLACK
+            </div>
+          </a>
+          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex  items-center">
+            <img src="./assets/drive.png" width="30" class="mx-2" alt="">
+            <div>
+            DRIVE
+          </div>
+          </a>
+          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex  items-center">
+            <img src="./assets/google.png" width="30" class="mx-2" alt="">
+            <div>
+            CALENDAR
+          </div>
+          </a>
+          <a href="#" class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex  items-center hover">
+            <img src="./assets/trello.png" width="30" class="mx-2" alt="">
+            <div>
+            TRELLO
+          </div>
+          </a>
+          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center  flex items-center">
+            <img src="./assets/dropbox.png" width="30" class="mx-2" alt="">
+            <div>
+              DROPBOX
+            </div>
+          </a> 
+          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex  items-center">
+            <img src="./assets/first.png" width="30" class="mx-2" alt="">
+            STIMS
+          </a>
+          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-left flex text-sm items-center  col-span-2">
+            <img src="./assets/logo-white.png" width="30" class="mx-2" alt="">
+            TEAM WEBSITE
+          </a>
+          <a href="#" class="bg-primary rounded text-white py-2 text-center text-sm flex items-center col-span-2">
+            <div class="w-10 mx-1">
+              <i class="fa fa-shopping-cart fa-2x"></i>
+            </div>
+              PROCUREMENT DOCUMENT
+          </a>
+        </div>
+      </div>
+      <!-- End of Helptful Links -->
+    </div>
+
+    <footer></footer>
+    <script src="./scripts.js"></script>
+    <script>
+      function setData() {
+        let announcementData = "";
+        //the Announcements variable is inside of the scripts.js file
+        //this loop will go through each item in the announcements array and create the designs.
+        announcements.forEach(function (el) {
+          announcementData += `<div class="my-4">
+            <div class="grid grid-cols-4 text-sm my-1">
+              <div class="font-bold text-primary">${el.name}</div>
+              <div class="">${el.date}</div>
+              <div>${el.time}</div>
+            </div>
+            <div>
+             ${el.content}
+            </div>
+          </div>`;
+        });
+
+        let eventsData = '';
+        events.forEach(function(el) {
+          const date = new Date(el.date);
+          console.log(date)
+          eventsData += `
+          <div class="grid grid-cols-7">
+            <div class="flex flex-col text-center border-r border-b border-green-600 col-span-2 lg:col-span-1">
+              <div>Tuesday</div>
+              <div class="font-semibold text-primary">${date.getDate()}</div>
+              <div>September</div>
+            </div>
+            <div class="col-span-5 lg:col-span-6 border-b border-green-600 flex flex-col px-2 text-sm">
+              <div class="font-semibold">${el.title}</div>
+              <div>${el.date} ${el.time}</div>
+              <div>Location: ${el.location}</div>
+            </div>
+          </div>`
+        })
+        document.getElementById("events").innerHTML = eventsData;
+
+        document.getElementById("announcements").innerHTML = announcementData;
+      }
+      window.onload = setData;
+    </script>
+  </body>
+</html>

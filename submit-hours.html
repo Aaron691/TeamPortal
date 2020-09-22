@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="w-full bg-gray-900 text-white relative">
+      <div class="w-full bg-primary h-3"></div>
+
+      <div
+        class="py-2 px-10 flex items-center justify-center relative h-20 text-sm lg:text-base"
+      >
+        <div class="bg-gray-900 absolute left-1 top-1">
+          <a href="./announcements.html">
+            <img src="./assets/logo.png" width="45" alt="" />
+          </a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./announcements.html" class="hover rounded px-2">Home</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./my-hours.html" class="hover rounded px-2">My Hours</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./submit-hours.html" class="hover rounded px-2">
+            Submit Hours</a
+          >
+        </div>
+        <div class="px-4 border-r">
+          <span class="hover rounded px-2"> Outreach Sign-Up </span>
+        </div>
+        <div class="px-2 border-r relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Team Tracker
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Evaluation
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Reports
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Settings
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Outreach
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="px-4">
+          <span class="hover rounded px-2"> Admin </span>
+        </div>
+      </div>
+      <div class="absolute right-1 top-1 flex">
+        <div class="border-r px-2 text-xs" id="userFirstName">
+          <a href="./profile.html"> Joy Uehara </a>
+        </div>
+        <div class="text-xs px-2">
+          <a href="./index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="p-4 px-8">
+      <h2 class="text-primary">Submit Hours</h2>
+      <!-- Start of form, this form isn't hooked up to anything. -->
+      <form action="" class="md:grid grid-cols-3 gap-8 text-primary">
+        <label for="date" class="flex flex-col" class="text-primary">
+          Date
+          <div class="input-container">
+          <input
+            type="date"
+            required
+            id="datePicker"
+            class="getdate border-b  border-green-600"
+          />
+        </div>
+        </label>
+        <label for="startTime" class="flex flex-col" class="text-primary">
+          Start Time
+          <div class="input-container">
+            <input
+              type="time"
+              required
+              id="startTime"
+              class="gettime border-b border-green-600"
+            />
+          </div>
+        </label>
+        <label for="endTime" class="flex flex-col" class="text-primary">
+          End Time
+          <div class="input-container">
+            <input
+              type="time"
+              required
+              id="endTime"
+              class="gettime border-b  border-green-600"
+            />
+          </div>
+        </label>
+        <label for="hoursType" class="flex flex-col" class="text-primary">
+          Hours Type
+          <input
+            type="text"
+            required
+            id="hoursType"
+            class="border-b  border-green-600"
+          />
+        </label>
+        <label
+          for="hoursMemo"
+          class="flex flex-col col-span-2"
+          class="text-primary"
+        >
+          Hours Description
+          <input
+            type="text"
+            required
+            placeholder="Description of Hours (Mandatory for Work at Home and Outreach)"
+            id="hoursMemo"
+            class="border-b  border-green-600"
+          />
+        </label>
+        <div class="col-span-3 text-center my-8">
+          <button type="button" class="text-white rounded bg-primary px-4 py-2">
+            SUBMIT
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer></footer>
+    <script src="./scripts.js"></script>
+    </script>
+    <style>
+   
+    input[type="time"]::-webkit-calendar-picker-indicator {
+      background: transparent;
+      bottom: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: auto;
+    }
+    </style>
+  </body>
+</html>

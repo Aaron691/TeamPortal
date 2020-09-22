@@ -1,0 +1,101 @@
+.text-primary {
+  color: #116625 !important;
+}
+
+.bg-primary {
+  background-color: #116625 !important;
+}
+
+.border-green-600 {
+  border-color: #116625 !important;
+}
+
+#leadership:hover {
+  background-color: #116625;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.right-1 {
+  right: 1rem;
+}
+
+.top-1 {
+  top: 1rem;
+}
+.left-1 {
+  left: 1rem;
+}
+
+/* Tooltip text */
+.tooltips .tooltiptext {
+  visibility: hidden;
+  z-index: 1;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltips:hover .tooltiptext {
+  visibility: visible;
+}
+.hover:hover {
+  background-color: #116625;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #116625;
+  background-color: black;
+}
+button.bg-primary:hover,
+button.bg-primary:focus,
+a.bg-primary:hover,
+a.bg-primary:focus {
+  background-color: black !important;
+}
+
+.input-container input {
+  box-sizing: border-box;
+  outline: 0;
+  position: relative;
+  width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}

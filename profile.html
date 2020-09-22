@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="w-full bg-gray-900 text-white relative">
+      <div class="w-full bg-primary h-3"></div>
+
+      <div
+        class="py-2 px-10 flex items-center justify-center relative h-20 text-sm lg:text-base"
+      >
+        <div class="bg-gray-900 absolute left-1 top-1">
+          <a href="./announcements.html">
+            <img src="./assets/logo.png" width="45" alt="" />
+          </a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./announcements.html" class="hover rounded px-2">Home</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./my-hours.html" class="hover rounded px-2">My Hours</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./submit-hours.html" class="hover rounded px-2">
+            Submit Hours</a
+          >
+        </div>
+        <div class="px-4 border-r">
+          <span class="hover rounded px-2"> Outreach Sign-Up </span>
+        </div>
+        <div class="px-2 border-r relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Team Tracker
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Evaluation
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Reports
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Settings
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Outreach
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="px-4">
+          <span class="hover rounded px-2"> Admin </span>
+        </div>
+      </div>
+      <div class="absolute right-1 top-1 flex">
+        <div class="border-r px-2 text-xs" id="userFirstName">
+          <a href="./profile.html"> Joy Uehara </a>
+        </div>
+        <div class="text-xs px-2">
+          <a href="./index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <div class="p-4 px-8">
+      <h2 class="text-primary">Profile</h2>
+      <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+        <div class="font-bold">Student Name</div>
+        <div>Joy Uehara</div>
+      </div>
+      <form onsubmit="return submitProfile()" method="POST">
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Primary Directorate<span class="text-red-500"> *</span>
+          </div>
+          <select
+            name=""
+            required
+            class="w-64 border-b border-green-600"
+            id="primaryDoctorate"
+          >
+            <option value="First">first</option>
+            <option value="second">second</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Current School<span class="text-red-500"> *</span>
+          </div>
+          <select
+            name=""
+            required
+            class="w-64 border-b border-green-600"
+            id="currentSchool"
+          >
+            <option value="First">first</option>
+            <option value="second">second</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Current Grade<span class="text-red-500"> *</span>
+          </div>
+          <select
+            name=""
+            required
+            class="w-64 border-b border-green-600"
+            id="currentGrade"
+          >
+            <option value="First">first</option>
+            <option value="second">second</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Current GPA<span class="text-red-500"> *</span>
+          </div>
+          <input
+            type="text"
+            required
+            step="any"
+            id="currentGpa"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            School in Eighth Grade<span class="text-red-500"> *</span>
+          </div>
+          <input
+            type="text"
+            required
+            id="eightGradeSchool"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="h-4"></div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Personal Email<span class="text-red-500"> *</span>
+          </div>
+          <input
+            type="email"
+            required
+            id="email"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Cell Phone Number<span class="text-red-500"> *</span>
+          </div>
+          <input
+            type="tel"
+            required
+            class="border-b border-green-600 w-64"
+            name="cellPhone"
+            id="cellPhone"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Home Phone Number<span class="text-red-500"> *</span>
+          </div>
+          <input
+            type="tel"
+            id="homePhone"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Address<span class="text-red-500"> *</span>
+          </div>
+          <div class="w-64 flex overflow-hidden">
+            <input
+              required
+              placeholder="Street"
+              type="text"
+              id="address"
+              class="border-b border-green-600 w-40"
+            />
+            <input
+              type="text"
+              placeholder="City"
+              required
+              id="city"
+              class="border-b border-green-600 ml-1"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div></div>
+          <div class="w-64 flex overflow-hidden">
+            <input
+              type="text"
+              required
+              placeholder="State"
+              class="border-b border-green-600 w-24"
+            />
+            <input
+              type="text"
+              required
+              placeholder="Zipcode"
+              class="border-b border-green-600 ml-1"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Birthdate<span class="text-red-500"> *</span>
+          </div>
+          <div class="input-container w-64">
+            <input
+              type="date"
+              id="birthDate"
+              required
+              class="border-b border-green-600"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Gender<span class="text-red-500"> *</span>
+          </div>
+          <select
+            required
+            name="gender"
+            class="w-64 border-b border-green-600"
+            id="gender"
+          >
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Non-Binary">Non-Binary</option>
+            <option value="Withheld">Prefer not to answer</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Main Race<span class="text-red-500"> *</span>
+          </div>
+          <select
+            required
+            name="race"
+            class="w-64 border-b border-green-600"
+            id="race"
+          >
+            <option value="White">White</option>
+            <option value="Black">Black / African American</option>
+            <option value="American Indian">
+              American Indian / Alaska Native
+            </option>
+            <option value="Asian">Asian</option>
+            <option value="Native Hawaiian or Pacific Islander">
+              Native Hawaiian / Pacific Islander
+            </option>
+            <option value="Other">More than one race</option>
+            <option value="Withheld">Prefer not to answer</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Ethnicity<span class="text-red-500"> *</span>
+          </div>
+          <select
+            required
+            name="ethnicity"
+            class="w-64 border-b border-green-600"
+            id="ethnicity"
+          >
+            <option value="White">Hispanic / Latino / Latina</option>
+            <option value="Black">Not Hispanic / Latino / Latina</option>
+            <option value="Withheld">Prefer not to answer</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">Dietary Restrictions</div>
+          <input
+            type="text"
+            class="border-b border-green-600 w-64"
+            id="dietaryRestrictions"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">Health and Safety Considerations</div>
+          <input
+            type="text"
+            class="border-b border-green-600 w-64"
+            id="dietaryRestrictions"
+          />
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Consent for Handbook<span class="text-red-500"> *</span>
+          </div>
+          <select
+            name="studentConsent"
+            required
+            class="w-64 border-b border-green-600"
+            id="studentConsent"
+          >
+            <option value="Yes">I consent</option>
+            <option value="No">I do not consent</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-3 border-b border-gray-300 my-1 py-1">
+          <div class="h-4"></div>
+        </div>
+        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">Parent / Guardian 1</div>
+          <div></div>
+          <div class="font-bold">Parent / Guardian 2</div>
+        </div>
+        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">Name<span class="text-red-500"> *</span></div>
+          <input
+            type="text"
+            id="parent1Name"
+            required
+            class="border-b border-green-600 w-64"
+          />
+
+          <div class="font-bold">Name</div>
+          <input
+            type="text"
+            id="parent2Name"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">Email<span class="text-red-500"> *</span></div>
+          <input
+            type="email"
+            required
+            id="parent1Email"
+            class="border-b border-green-600 w-64"
+          />
+          <div class="font-bold">Email</div>
+          <input
+            type="email"
+            id="parent2Email"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Phone Number<span class="text-red-500"> *</span>
+          </div>
+          <input
+            type="tel"
+            id="parent1Phone"
+            required
+            class="border-b border-green-600 w-64"
+          />
+          <div class="font-bold">Phone Number</div>
+          <input
+            type="tel"
+            id="parent2Phone"
+            class="border-b border-green-600 w-64"
+          />
+        </div>
+        <div class="grid grid-cols-4 border-b border-gray-300 my-1 py-1">
+          <div class="font-bold">
+            Consent for Handbook<span class="text-red-500"> *</span>
+          </div>
+          <select
+            name="parent1Consent"
+            required
+            class="w-64 border-b border-green-600"
+            id="parent1Consent"
+          >
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+          <div class="font-bold">Consent for Handbook</div>
+          <select
+            name="parent2Consent"
+            class="w-64 border-b border-green-600"
+            id="parent2Consent"
+          >
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="text-sm text-red-500">
+          (Fields marked with * are required)
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="rounded my-4 bg-primary px-4 py-1 text-white font-bold"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer></footer>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

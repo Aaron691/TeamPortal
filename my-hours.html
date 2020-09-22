@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="w-full bg-gray-900 text-white relative">
+      <div class="w-full bg-primary h-3"></div>
+
+      <div
+        class="py-2 px-10 flex items-center justify-center relative h-20 text-sm lg:text-base"
+      >
+        <div class="bg-gray-900 absolute left-1 top-1">
+          <a href="./announcements.html">
+            <img src="./assets/logo.png" width="45" alt="" />
+          </a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./announcements.html" class="hover rounded px-2">Home</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./my-hours.html" class="hover rounded px-2">My Hours</a>
+        </div>
+        <div class="px-4 border-r">
+          <a href="./submit-hours.html" class="hover rounded px-2">
+            Submit Hours
+          </a>
+        </div>
+        <div class="px-4 border-r">
+          <span class="hover rounded px-2"> Outreach Sign-Up </span>
+        </div>
+        <div class="px-2 border-r relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Team Tracker
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Evaluation
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Reports
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Settings
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                Outreach
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="px-4">
+          <span class="hover rounded px-2"> Admin </span>
+        </div>
+      </div>
+      <div class="absolute right-1 top-1 flex">
+        <div class="border-r px-2 text-xs" id="userFirstName">
+          <a href="./profile.html"> Joy Uehara </a>
+        </div>
+        <div class="text-xs px-2">
+          <a href="./index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="p-4 px-8">
+      <h2 class="text-primary">My Hours</h2>
+      <div class="grid grid-cols-3 row-gap-2">
+        <div class="border-b border-green-600">Total Hours</div>
+        <div class="border-b border-green-600 col-span-2" id="totalHours"></div>
+        <div class="border-b border-green-600">Total Outreach Hours</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="totalOutreach"
+        ></div>
+        <div class="border-b border-green-600">Total Preseason Hours</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="totalPreseason"
+        ></div>
+        <div class="border-b border-green-600">
+          Completed Induction Requirements
+        </div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="completedInduction"
+        ></div>
+        <div class="border-b border-green-600 h-8"></div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="zoomAttendance"
+        ></div>
+        <div class="border-b border-green-600">Zoom Meeting Attendance</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="directorateAttendance"
+        ></div>
+        <div class="border-b border-green-600">
+          Directorate Meeting Attendance
+        </div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="quadCompletion"
+        ></div>
+        <div class="border-b border-green-600">Quad Chart Completion</div>
+        <div class="border-b border-green-600 col-span-2" id=""></div>
+        <div class="border-b border-green-600 h-8"></div>
+        <div class="border-b border-green-600 col-span-2" id=""></div>
+        <div class="border-b border-green-600">Handbook Consent Form</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="handbookConsent"
+        ></div>
+        <div class="border-b border-green-600">FIRST Registration (STIMS)</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="stimsRegistration"
+        ></div>
+        <div class="border-b border-green-600">Valid Academic Standing</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="validAcedemic"
+        ></div>
+        <div class="border-b border-green-600">Preseason Permission Slip</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="preseasonPermission"
+        ></div>
+        <div class="border-b border-green-600">
+          Competitions Permission Slip
+        </div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="competitionPermission"
+        ></div>
+        <div class="border-b border-green-600">Documentary Waiver</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="documentaryWaiver"
+        ></div>
+        <div class="border-b border-green-600">Class Eligibility</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="classEligibility"
+        ></div>
+        <div class="border-b border-green-600">Regional Eligibility</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="regionalEligibility"
+        ></div>
+        <div class="border-b border-green-600">Championships Eligibility</div>
+        <div
+          class="border-b border-green-600 col-span-2"
+          id="championshipEligibility"
+        ></div>
+        <div class="border-b border-green-600 h-8"></div>
+        <div class="border-b border-green-600 col-span-2" id=""></div>
+        <div class="border-b border-green-600">Competition Season Hours</div>
+        <div
+          class="border-b border-green-600 col-span-2 flex text-sm"
+          id="totalHours"
+        >
+          <div class="font-semibold w-16">Week 1</div>
+          <div class="font-semibold w-16">Week 2</div>
+          <div class="font-semibold w-16">Week 3</div>
+          <div class="font-semibold w-16">Week 4</div>
+          <div class="font-semibold w-16">Week 5</div>
+          <div class="font-semibold w-16">Week 6</div>
+        </div>
+        <div class="border-b border-green-600"></div>
+        <div
+          class="border-b border-green-600 col-span-2 flex text-xs"
+          id="totalHours"
+        >
+          <div class="text-gray-600 w-16">20:00</div>
+          <div class="text-gray-600 w-16">20:00</div>
+          <div class="text-gray-600 w-16">20:00</div>
+          <div class="text-gray-600 w-16">20:00</div>
+          <div class="text-gray-600 w-16">20:00</div>
+          <div class="text-gray-600 w-16">20:00</div>
+        </div>
+        <div class="border-b border-green-600 h-8"></div>
+        <div class="border-b border-green-600 col-span-2" id="totalHours"></div>
+        <div class="border-b border-green-600">Competition Season Hours</div>
+        <div
+          class="border-b border-green-600 col-span-2 flex text-sm"
+          id="totalHours"
+        >
+          <div class="font-semibold w-16">Week .5</div>
+          <div class="font-semibold w-16">Week 1</div>
+          <div class="font-semibold w-16">Week 2</div>
+          <div class="font-semibold w-16">Week 3</div>
+          <div class="font-semibold w-16">Week 4</div>
+          <div class="font-semibold w-16">Week 5</div>
+          <div class="font-semibold w-16">Week 6</div>
+          <div class="font-semibold w-16">Week 7</div>
+          <div class="font-semibold w-16">Week 8</div>
+        </div>
+        <div class="border-b border-green-600"></div>
+        <div
+          class="border-b border-green-600 col-span-2 flex text-xs"
+          id="totalHours"
+        >
+          <div class="text-gray-600 w-16">18:00</div>
+          <div class="text-gray-600 w-16">16:00</div>
+          <div class="text-gray-600 w-16">15:30</div>
+          <div class="text-gray-600 w-16">15:45</div>
+          <div class="text-gray-600 w-16">40:00</div>
+          <div class="text-gray-600 w-16">14:00</div>
+          <div class="text-gray-600 w-16">35:00</div>
+          <div class="text-gray-600 w-16">14:00</div>
+          <div class="text-gray-600 w-16">60:00</div>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

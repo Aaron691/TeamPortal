@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+          <div class="text-center">
+            <img src="./assets/logo.png" width="250" class="mx-auto" alt="" />
+          </div>
+          <h2 class="text-center text-primary">Login</h2>
+          <br />
+          <div>
+            <div>
+              <label for="email" class="text-primary">Email </label>
+              <div class="relative flex">
+                <i
+                  class="fa fa-envelope-open-o fa-2x absolute text-primary"
+                  style="margin: 5px"
+                ></i>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Type your email"
+                  class="border-b text-primary pl-5 p-2 w-full"
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <label for="password" class="text-primary">Password </label>
+              <div class="relative flex flex-col">
+                <i
+                  class="fa fa-lock fa-2x absolute text-primary"
+                  style="margin: 5px"
+                ></i>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Type your password"
+                  class="border-b text-primary pl-5 p-2"
+                />
+                <a
+                  href="/resetPassword.html"
+                  class="text-sm text-gray-600 text-right"
+                >
+                  Forgot password?
+                </a>
+              </div>
+            </div>
+            <div class="text-center my-3">
+              <button
+                class="rounded bg-primary px-4 py-1 text-white font-bold text-center"
+                onClick="nextPage()"
+              >
+                LOGIN
+              </button>
+              <br />
+              <span class="text-sm">
+                Or <a href="/register.html" class="underline">Register</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm"></div>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+    <sript> </sript>
+  </body>
+</html>
