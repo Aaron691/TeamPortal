@@ -7,8 +7,8 @@
     <title>Robotics</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -32,49 +32,77 @@
     <nav class="w-full bg-gray-900 text-white relative">
       <div class="w-full bg-primary h-3"></div>
 
-      <div
-        class="px-10 flex items-center relative h-12 text-sm lg:text-base"
-      >
-        <div class="bg-gray-900 ">
+      <div class="px-10 flex items-center relative h-12 text-sm lg:text-base">
+        <div class="bg-gray-900">
           <a href="./announcements.html">
             <img src="./assets/logo.png" width="45" alt="" />
           </a>
         </div>
         <div class="border-r text-center">
-          <a href="./announcements.html" class="hover px-4 px-2">Home</a>
-        </div>
-        <div class="border-r text-center">
-          <a href="./my-hours.html" class="hover px-4 px-2">My Hours</a>
-        </div>
-        <div class="border-r text-center">
-          <a href="./submit-hours.html" class="hover px-4 px-2">
-            Submit Hours</a
+          <a href="./announcements.html" class="hover px-2 mx-2 rounded"
+            >Home</a
           >
         </div>
+        <div class="border-r text-center">
+          <a href="./my-hours.html" class="hover px-2 mx-2 rounded">My Hours</a>
+        </div>
+        <div class="border-r text-center">
+          <a href="./submit-hours.html" class="hover px-2 mx-2 rounded">
+            Submit Hours
+          </a>
+        </div>
         <div class="border-r">
-          <span class="hover px-4 px-2"> Outreach Sign-Up </span>
+          <span class="hover px-2 mx-2 rounded">
+            <a href="./outreach.html">Outreach Sign-Up</a>
+          </span>
         </div>
         <div class="border-r relative tooltips">
-          <div class="px-2 px-4 cursor-pointer" id="leadership">Leadership</div>
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
           <span
             class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
           >
             <ul>
-              <li class="border-b border-green-600 py-1 hover">Team Tracker</li>
-              <li class="border-b border-green-600 py-1 hover">Evaluation</li>
-              <li class="border-b border-green-600 py-1 hover">Reports</li>
-              <li class="border-b border-green-600 py-1 hover">Settings</li>
-              <li class="border-b border-green-600 py-1 hover">Outreach</li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/reports.html">Reports</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/settings.html"> Settings </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/outreach.html"> Outreach </a>
+              </li>
             </ul>
           </span>
         </div>
-        <div class="">
-          <span class="hover px-4"> Admin </span>
+        <div class="relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Admin
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./admin/team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./admin/mentor-tracker.html"> Mentor Tracker </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./admin/users.html"> Users </a>
+              </li>
+            </ul>
+          </span>
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
-        <div class="border-r px-2 text-xs" id="userFirstName">
-          <a href="./profile.html"> Joy Uehara </a>
+        <div class="border-r px-2 text-xs">
+          <a href="./profile.html" id="userFirstName"></a>
         </div>
         <div class="text-xs px-2">
           <a href="./index.html">Logout</a>
@@ -82,10 +110,10 @@
       </div>
     </nav>
 
-    <div class="p-8  md:grid grid-cols-7 gap-8">
+    <div class="p-8 md:grid grid-cols-7 gap-8">
       <!-- Left Column -->
       <div class="col-span-4 lg:col-span-5">
-          <!-- Beginning of Announcements -->
+        <!-- Beginning of Announcements -->
         <div class="bg-gray-100 shadow rounded p-4 py-2">
           <div class="flex items-center">
             <div class="pr-2">
@@ -93,48 +121,60 @@
                 class="fa fa-bullhorn text-primary fa-2x transform -rotate-45"
               ></i>
             </div>
-            <h2 class="text-primary">Announcements</h3>
-            <button class="ml-auto bg-primary my-3 flex items-center rounded-full text-white px-3">
-              <img src="./assets/slack.png" width="20" class="mr-1 -ml-1" alt="">
-                SLACK
+            <h2 class="text-primary">Announcements</h2>
+            <button
+              class="ml-auto bg-primary my-3 flex items-center rounded-full text-white px-3"
+            >
+              <img
+                src="./assets/slack.png"
+                width="20"
+                class="mr-1 -ml-1"
+                alt=""
+              />
+              SLACK
             </button>
           </div>
-          <div id="announcements" class="overflow-y-auto" style="height:30rem;">
+          <div id="announcements" class="overflow-y-auto" style="height: 30rem">
             <!-- 
               This data is generated in the function setData(); 
             -->
           </div>
         </div>
         <!-- End of Announcements -->
-        <div class=" bg-gray-100 shadow rounded p-4 my-4 py-2">
-        <!-- Beginning of Calendar -->
-        <div id="calendar" >
-          <div class="flex items-center">
-            <div class="pr-3">
-            <!-- Calendar Icon -->
-              <i class="fa fa-calendar text-primary fa-2x">
-              </i>
-            </div>
-            <h2 class="text-primary">Calendar</h2>
-            <button class="ml-auto bg-primary my-3 flex items-center rounded-full text-white px-3">
-              <img src="./assets/google.png" width="20" class="mr-1 -ml-1" alt="">
+        <div class="bg-gray-100 shadow rounded p-4 my-4 py-2">
+          <!-- Beginning of Calendar -->
+          <div id="calendar">
+            <div class="flex items-center">
+              <div class="pr-3">
+                <!-- Calendar Icon -->
+                <i class="fa fa-calendar text-primary fa-2x"> </i>
+              </div>
+              <h2 class="text-primary">Calendar</h2>
+              <button
+                class="ml-auto bg-primary my-3 flex items-center rounded-full text-white px-3"
+              >
+                <img
+                  src="./assets/google.png"
+                  width="20"
+                  class="mr-1 -ml-1"
+                  alt=""
+                />
                 CALENDAR
-            </button>
-          </div>
-        <div id="events" class="">
-          <!-- 
+              </button>
+            </div>
+            <div id="events" class="">
+              <!-- 
             this data is generated in the function setData(); data is being pulled from the file script.js
           -->
+            </div>
+            <!-- End of Calendar -->
+          </div>
         </div>
-        <!-- End of Calendar -->
       </div>
-    </div>
-     
-    </div>
-     <!-- Right column -->
-     <div class="col-span-3 lg:col-span-2 ">
-       <!-- Beginning of Summary -->
-        <div class=" bg-gray-100 shadow rounded px-2 py-4">
+      <!-- Right column -->
+      <div class="col-span-3 lg:col-span-2">
+        <!-- Beginning of Summary -->
+        <div class="bg-gray-100 shadow rounded px-2 py-4">
           <div class="flex items-center text-primary">
             <div class="pr-2">
               <i class="fa fa-file fa-2x"></i>
@@ -142,116 +182,130 @@
             <h2>Summary</h2>
           </div>
           <div class="text-sm -mt-2">
-            <div class=" flex  border-b border-green-600 py-1">
+            <div class="flex border-b border-green-600 py-1">
               <div class="w-48">Relevant Hours:</div>
               <div class="text-red-500">62:00</div>
             </div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Total Outreach Hours:</div>
+              <div class="w-48">Total Outreach Hours:</div>
               <div class="text-green-500">15:00</div>
             </div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Zoom Meetings:</div>
+              <div class="w-48">Zoom Meetings:</div>
               <div class="text-green-500">80%</div>
             </div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Directorate Meetings:</div>
+              <div class="w-48">Directorate Meetings:</div>
               <div class="text-red-500">20%</div>
             </div>
             <div class="flex border-b border-green-600 py-1 h-8"></div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Handbook Consent Form:</div>
+              <div class="w-48">Handbook Consent Form:</div>
               <div class="text-green-500">Yes</div>
             </div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">FIRST Registration:</div>
+              <div class="w-48">FIRST Registration:</div>
               <div class="text-orange-600">Sign Consent Form</div>
             </div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Preseason Permission Slip:</div>
+              <div class="w-48">Preseason Permission Slip:</div>
               <div class="text-green-500"></div>
             </div>
             <div class="flex border-b border-green-600 py-1 h-8"></div>
 
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Competition Permission Slip:</div>
+              <div class="w-48">Competition Permission Slip:</div>
               <div class="text-red-500"></div>
             </div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Regional Eligibility:</div>
+              <div class="w-48">Regional Eligibility:</div>
               <div class="text-green-500"></div>
             </div>
             <div class="flex border-b border-green-600 py-1 h-8"></div>
             <div class="flex border-b border-green-600 py-1">
-              <div class="w-48 ">Championships Eligibility:</div>
+              <div class="w-48">Championships Eligibility:</div>
               <div class="text-green-500"></div>
             </div>
           </div>
-      </div>
-      <!-- End of Summary -->
+        </div>
+        <!-- End of Summary -->
 
-      <!-- Helpful Links -->
-      <div class="my-4 bg-gray-100 shadow rounded p-2">
-        <div class="flex items-center  text-primary">
-          <div class="pr-2">
-            <i class="fa fa-link fa-2x"></i>
+        <!-- Helpful Links -->
+        <div class="my-4 bg-gray-100 shadow rounded p-2">
+          <div class="flex items-center text-primary">
+            <div class="pr-2">
+              <i class="fa fa-link fa-2x"></i>
+            </div>
+            <h2>Helpful Links</h2>
           </div>
-          <h2>Helpful Links</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img src="./assets/slack.png" width="30" class="mx-2" alt="" />
+              <div>SLACK</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img src="./assets/drive.png" width="30" class="mx-2" alt="" />
+              <div>DRIVE</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img src="./assets/google.png" width="30" class="mx-2" alt="" />
+              <div>CALENDAR</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img src="./assets/trello.png" width="30" class="mx-2" alt="" />
+              <div>TRELLO</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img src="./assets/dropbox.png" width="30" class="mx-2" alt="" />
+              <div>DROPBOX</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <div class="w-10 mx-1">
+                <i class="fa fa-shopping-cart fa-2x"></i>
+              </div>
+              <div>PROCUREMENT DOC</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img
+                src="./assets/logo-white.png"
+                width="30"
+                class="mx-2"
+                alt=""
+              />
+              <div>TEAM WEBSITE</div>
+            </a>
+            <a
+              href="#"
+              class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center"
+            >
+              <img src="./assets/first.png" width="30" class="mx-2" alt="" />
+              <div>STIMS</div>
+            </a>
+          </div>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2  py-2 text-center flex   items-center">
-            <img src="./assets/slack.png" width="30" class="mx-2" alt="">
-            <div>
-              SLACK
-            </div>
-          </a>
-          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex  items-center">
-            <img src="./assets/drive.png" width="30" class="mx-2" alt="">
-            <div>
-            DRIVE
-          </div>
-          </a>
-          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex  items-center">
-            <img src="./assets/google.png" width="30" class="mx-2" alt="">
-            <div>
-            CALENDAR
-          </div>
-          </a>
-          <a href="#" class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex  items-center">
-            <img src="./assets/trello.png" width="30" class="mx-2" alt="">
-            <div>
-            TRELLO
-          </div>
-          </a>
-          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center  flex items-center">
-            <img src="./assets/dropbox.png" width="30" class="mx-2" alt="">
-            <div>
-              DROPBOX
-            </div>
-          </a> 
-          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex  items-center">
-            <div class="w-10 mx-1">
-              <i class="fa fa-shopping-cart fa-2x"></i>
-            </div>
-            <div>
-			PROCUREMENT DOC
-			</div>
-          </a>
-          <a href="#" class="bg-primary rounded text-white  pl-1 pr-2 py-2 text-center flex items-center">
-            <img src="./assets/logo-white.png" width="30" class="mx-2" alt="">
-            <div>
-			TEAM WEBSITE
-			</div>
-          </a>
-          <a href="#" class="bg-primary rounded text-white pl-1 pr-2 py-2 text-center flex items-center">
-			<img src="./assets/first.png" width="30" class="mx-2" alt="">
-			<div>
-              STIMS
-			</div>
-          </a>
-        </div>
+        <!-- End of Helptful Links -->
       </div>
-      <!-- End of Helptful Links -->
     </div>
 
     <footer></footer>
@@ -274,10 +328,10 @@
           </div>`;
         });
 
-        let eventsData = '';
-        events.forEach(function(el) {
+        let eventsData = "";
+        events.forEach(function (el) {
           const date = new Date(el.date);
-          console.log(date)
+          console.log(date);
           eventsData += `
           <div class="grid grid-cols-7">
             <div class="flex flex-col text-center border-r border-b border-green-600 col-span-2 lg:col-span-1">
@@ -290,8 +344,8 @@
               <div>${el.date} ${el.time}</div>
               <div>Location: ${el.location}</div>
             </div>
-          </div>`
-        })
+          </div>`;
+        });
         document.getElementById("events").innerHTML = eventsData;
 
         document.getElementById("announcements").innerHTML = announcementData;

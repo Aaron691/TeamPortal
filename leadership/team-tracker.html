@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./../styles.css" />
+  </head>
+
+  <body>
+    <nav class="w-full bg-gray-900 text-white relative">
+      <div class="w-full bg-primary h-3"></div>
+
+      <div class="px-10 flex items-center relative h-12 text-sm lg:text-base">
+        <div class="bg-gray-900">
+          <a href="./../announcements.html">
+            <img src="./../assets/logo.png" width="45" alt="" />
+          </a>
+        </div>
+        <div class="border-r text-center">
+          <a href="./../announcements.html" class="hover px-2 mx-2 rounded"
+            >Home</a
+          >
+        </div>
+        <div class="border-r text-center">
+          <a href="./../my-hours.html" class="hover px-2 mx-2 rounded"
+            >My Hours</a
+          >
+        </div>
+        <div class="border-r text-center">
+          <a href="./../submit-hours.html" class="hover px-2 mx-2 rounded">
+            Submit Hours
+          </a>
+        </div>
+        <div class="border-r">
+          <span class="hover px-2 mx-2 rounded">
+            <a href="./../outreach.html">Outreach Sign-Up</a>
+          </span>
+        </div>
+        <div class="border-r relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./reports.html">Reports</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./settings.html"> Settings </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./outreach.html"> Outreach </a>
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Admin
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./../admin/team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./../admin/mentor-tracker.html"> Mentor Tracker </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./../admin/users.html"> Users </a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <div class="absolute right-1 top-1 flex">
+        <div class="border-r px-2 text-xs">
+          <a href="./../profile.html" id="userFirstName"> Joy Uehara </a>
+        </div>
+        <div class="text-xs px-2">
+          <a href="./../index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="p-8 relative">
+      <!-- Profile Modal -->
+      <div
+        class="absolute w-full h-screen hidden overflow-y-auto"
+        id="profile-modal"
+      >
+        <div
+          class="mx-auto border-2 border-green-600 rounded-lg w-5/6 md:w-1/2 bg-white shadow p-4 overflow-x-hidden"
+        >
+          <div class="text-center">
+            <div class="text-primary text-2xl font-bold">Profile</div>
+            <div id="profile-name" class="text-primary text-xl font-bold">
+              gabe
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="font-semibold">Primary Directorate:</div>
+            <div id="profile-directorate"></div>
+            <div class="font-semibold">Current School:</div>
+            <div id="profile-current-school"></div>
+            <div class="font-semibold">Current Grade:</div>
+            <div id="profile-current-grade"></div>
+            <div class="font-semibold">Rookie Season:</div>
+            <div id="profile-rookie"></div>
+            <br />
+            <div class="font-semibold"></div>
+            <div class="font-semibold">Personal Email:</div>
+            <div id="profile-email"></div>
+            <div class="font-semibold">Cell Phone:</div>
+            <div id="profile-cell"></div>
+            <div class="font-semibold">Home Phone:</div>
+            <div id="profile-home"></div>
+            <div class="font-semibold">BirthDate:</div>
+            <div id="profile-birth"></div>
+            <div class="font-semibold">Dietary Restrictions:</div>
+            <div id="profile-diet"></div>
+            <div class="col-span-2 font-semibold">
+              Health and Safety Considerations:
+            </div>
+            <div class="col-span-2" id="profile-health"></div>
+            <br />
+            <div class="font-bold col-span-2">Parent / Guardian 1</div>
+            <div class="font-semibold">Name:</div>
+            <div id="profile-p1-name"></div>
+            <div class="font-semibold">Email:</div>
+            <div id="profile-p1-email"></div>
+            <div class="font-semibold">Phone:</div>
+            <div id="profile-p1-phone"></div>
+            <br />
+            <div class="font-bold col-span-2">Parent / Guardian 2</div>
+            <div class="font-semibold">Name:</div>
+            <div id="profile-p2-name"></div>
+            <div class="font-semibold">Email:</div>
+            <div id="profile-p2-email"></div>
+            <div class="font-semibold">Phone:</div>
+            <div id="profile-p2-phone"></div>
+          </div>
+          <div class="text-center">
+            <button
+              class="bg-primary text-white px-4 py-2 rounded"
+              onclick="closeProfile()"
+            >
+              DONE
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End of profile modal -->
+      <div class="fixed w-full h-screen hidden" id="hours-modal">
+        <div
+          class="mx-auto border-2 border-green-600 rounded-lg w-5/6 lg:w-1/2 bg-white shadow p-4 overflow-y-auto overflow-x-hidden max-h-3"
+        >
+          <div class="text-center">
+            <div class="text-primary text-2xl font-bold">Hours</div>
+            <div id="hours-name" class="text-primary text-xl font-bold"></div>
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="font-semibold">Total Hours:</div>
+            <div id="hours-total"></div>
+            <div class="font-semibold">Total Outreach Hours:</div>
+            <div id="hours-outreach-total"></div>
+            <div class="font-semibold">Total Preseason Hours:</div>
+            <div id="hours-preseason-total"></div>
+            <div class="font-semibold">Completed Induction Requirements:</div>
+            <div id="hours-induction"></div>
+            <br />
+            <div class="font-semibold"></div>
+            <div class="font-semibold">Zoom Meeting Attendance:</div>
+            <div id="hours-zoom"></div>
+            <div class="font-semibold">Directorate Meeting Attendance:</div>
+            <div id="hours-directorate-attendance"></div>
+            <div class="font-semibold">Quad Chart Completion:</div>
+            <div id="hours-quad-chart"></div>
+            <br />
+            <div></div>
+            <div class="font-semibold">Handbook Consent Form:</div>
+            <div id="hours-consent"></div>
+            <div class="font-semibold">FIRST Registration (STIMS):</div>
+            <div id="hours-stims"></div>
+            <div class="font-semibold">Valid Academic Standing:</div>
+            <div id="hours-academic-standing"></div>
+            <div class="font-semibold">Preseason Permission Slip:</div>
+            <div id="hours-preseason-permission"></div>
+            <div class="font-semibold">Competitions Permission Slip:</div>
+            <div id="hours-competitions"></div>
+            <div class="font-semibold">Documentary Waiver:</div>
+            <div id="hours-documenteray"></div>
+            <div class="font-semibold">Class Eligibility:</div>
+            <div id="hours-class"></div>
+            <div class="font-semibold">Regional Eligibility:</div>
+            <div id="hours-regional"></div>
+            <div class="font-semibold">Championships Eligibility:</div>
+            <div id="hours-championship"></div>
+            <br />
+            <div></div>
+            <div class="font-semibold col-span-2">Build Season Hours:</div>
+            <div class="col-span-2 flex text-sm">
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 1
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 2
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 3
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 4
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 5
+              </div>
+              <div class="border-green-600 border-b px-1 w-12">Wk 6</div>
+            </div>
+            <div class="col-span-2 flex h-6 text-center text-sm">
+              <div class="border-green-600 border-r px-1 w-12 build-week"></div>
+              <div class="border-green-600 border-r px-1 w-12 build-week"></div>
+              <div class="border-green-600 border-r px-1 w-12 build-week"></div>
+              <div class="border-green-600 border-r px-1 w-12 build-week"></div>
+              <div class="border-green-600 border-r px-1 w-12 build-week"></div>
+              <div class="border-green-600 px-1 w-12 build-week"></div>
+            </div>
+            <br />
+            <div></div>
+            <div class="font-semibold col-span-2">
+              Competition Season Hours:
+            </div>
+            <div class="col-span-2 flex text-sm">
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk .5
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 1
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 2
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 3
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 4
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 5
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 6
+              </div>
+              <div class="border-green-600 border-r border-b px-1 w-12">
+                Wk 7
+              </div>
+              <div class="border-green-600 border-b px-1 w-12">Wk 8</div>
+            </div>
+            <div class="col-span-2 flex h-6 text-center text-sm">
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+              <div class="border-green-600 border-r px-1 w-12"></div>
+
+              <div class="border-green-600 px-1 w-12"></div>
+            </div>
+          </div>
+          <div class="text-center my-4">
+            <button
+              class="bg-primary text-white px-4 py-2 rounded"
+              onclick="closeHours()"
+            >
+              DONE
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Hours Modal -->
+
+      <div>
+        <h2 class="text-primary">Team Tracker</h2>
+        <label for="search"
+          >Search:
+          <input
+            class="border-b border-green-600"
+            placeholder="Student's Name"
+            type="text"
+          />
+        </label>
+      </div>
+      <div class="border-t border-green-600">
+        <div
+          class="border-b border-green-600 grid grid-cols-10 font-bold text-sm text-center"
+        >
+          <div class="col-span-2">Name</div>
+          <div>Profile</div>
+          <div>Hours</div>
+          <div>Email</div>
+          <div>Directorate</div>
+          <div>Preseason Permission Slip</div>
+          <div>Competitions Permission Slip</div>
+          <div>First Registration (STIMS)</div>
+          <div>Waiver</div>
+        </div>
+      </div>
+      <div id="list-container"></div>
+    </div>
+
+    <footer></footer>
+    <script src="./../scripts.js"></script>
+    <script>
+      function initializePage() {
+        let listData = "";
+        const students = studentData.filter((el) => {
+          return el.student;
+        });
+        students.forEach((el) => {
+          listData += `
+            <div class="border-b border-green-600 grid grid-cols-10 gap-2 text-center py-2">
+              <div class="col-span-2 text-left">${el.name}</div>
+              <button onclick="showProfile(${el._id})">Show</button>
+              <button onclick="showHours(${el._id})">Show</button>
+              <div class="overflow-hidden">${el.personal_email}</div>
+              <div>${el.directorate}</div>
+              <div>${el.preseason_permission_slip}</div>
+              <div>${el.competitions_permission_slip}</div>
+              <div>${el.stims_registration}</div>
+              <div>${el.student_consent}</div>
+            </div>
+          `;
+        });
+        document.getElementById("list-container").innerHTML = listData;
+      }
+
+      function showProfile(id) {
+        document.getElementById("profile-modal").classList.remove("hidden");
+        let student = null;
+        studentData.some((el) => {
+          if (el._id === id) {
+            student = el;
+            return true;
+          }
+        });
+
+        const grade =
+          student.current_grade == 1
+            ? "Freshman"
+            : student.current_grade == 2
+            ? "Sophmore"
+            : student.current_grade == 3
+            ? "Junior"
+            : student.current_grade == 4
+            ? "Senior"
+            : "Super Senior";
+
+        document.getElementById("profile-name").innerHTML = student.name;
+        document.getElementById("profile-directorate").innerHTML =
+          student.directorate;
+        document.getElementById("profile-current-school").innerHTML =
+          student.current_school;
+        document.getElementById("profile-current-grade").innerHTML = grade;
+        document.getElementById("profile-email").innerHTML =
+          student.personal_email;
+        document.getElementById("profile-cell").innerHTML = student.cell_phone;
+        document.getElementById("profile-home").innerHTML = student.home_phone;
+        document.getElementById("profile-birth").innerHTML = student.birthdate;
+        document.getElementById("profile-diet").innerHTML =
+          student.dietary_restrictions;
+        document.getElementById("profile-health").innerHTML =
+          student.health_restrictions;
+
+        document.getElementById("profile-p1-name").innerHTML =
+          student.parent_one.name;
+        document.getElementById("profile-p1-phone").innerHTML =
+          student.parent_one.phone;
+        document.getElementById("profile-p1-email").innerHTML =
+          student.parent_one.email;
+
+        if (student.parent_two) {
+          document.getElementById("profile-p2-name").innerHTML =
+            student.parent_two.name;
+          document.getElementById("profile-p2-phone").innerHTML =
+            student.parent_two.phone;
+          document.getElementById("profile-p2-email").innerHTML =
+            student.parent_two.email;
+        }
+      }
+
+      function closeProfile() {
+        document.getElementById("profile-modal").classList.add("hidden");
+      }
+
+      function showHours(id) {
+        document.getElementById("hours-modal").classList.remove("hidden");
+        let student = null;
+        studentData.some((el) => {
+          if (el._id === id) {
+            student = el;
+            return true;
+          }
+        });
+
+        document.getElementById("hours-total").innerHTML = student.total_hours;
+        document.getElementById("hours-outreach-total").innerHTML =
+          student.total_outreach_hours;
+        document.getElementById("hours-preseason-total").innerHTML =
+          student.total_preseason_hours;
+        document.getElementById("hours-induction").innerHTML =
+          student.induction_req;
+        document.getElementById("hours-zoom").innerHTML =
+          student.zoom_attendance;
+        document.getElementById("hours-directorate-attendance").innerHTML =
+          student.directorate_attendance;
+        document.getElementById("hours-quad-chart").innerHTML =
+          student.quad_completion;
+        document.getElementById("hours-consent").innerHTML =
+          student.student_consent;
+        document.getElementById("hours-stims").innerHTML = student.stims;
+        document.getElementById("hours-academic-standing").innerHTML =
+          student.good_academic_standing;
+        document.getElementById("hours-preseason-permission").innerHTML =
+          student.preseason_permission;
+        document.getElementById("hours-competitions").innerHTML =
+          student.competitions_permission;
+        document.getElementById("hours-documenteray").innerHTML =
+          student.documentary_waiver;
+        document.getElementById("hours-class").innerHTML =
+          student.class_eligibility;
+        document.getElementById("hours-regional").innerHTML =
+          student.regional_eligibility;
+        document.getElementById("hours-championship").innerHTML =
+          student.championship_eligibility;
+      }
+
+      function closeHours() {
+        document.getElementById("hours-modal").classList.add("hidden");
+      }
+
+      window.onload = initializePage();
+    </script>
+  </body>
+</html>

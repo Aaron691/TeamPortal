@@ -74,11 +74,15 @@ a:hover {
   color: white;
 }
 
-button.bg-primary:hover,
-button.bg-primary:focus,
 a.bg-primary:hover,
 a.bg-primary:focus {
   background-color: rgb(170, 170, 170) !important;
+  color: #116625 !important;
+}
+
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: black !important;
   color: #116625 !important;
 }
 
@@ -129,4 +133,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .h-15 {
   height: 4rem;
+}
+
+.max-h-3 {
+  max-height: 75%;
 }

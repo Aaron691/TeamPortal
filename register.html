@@ -7,9 +7,9 @@
     <title>Robotics</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<link
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
@@ -33,7 +33,9 @@
       <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm">
-          <div class="text-center"><img src="./assets/logo.png" class="mx-auto" width="250" alt="" /></div>
+          <div class="text-center">
+            <img src="./assets/logo.png" class="mx-auto" width="250" alt="" />
+          </div>
           <h2 class="text-center text-primary">Register</h2>
           <br />
           <form action="">
@@ -46,7 +48,7 @@
                 ></i>
                 <input
                   id="name"
-                  type="name"
+                  type="text"
                   placeholder="Type your full name"
                   class="border-b text-primary border-b pl-5 p-2 w-full"
                 />
@@ -72,9 +74,7 @@
             <div>
               <label for="password" class="text-primary">Password </label>
               <div class="relative">
-                <i
-                  class="fa fa-lock fa-2x absolute text-primary m-1 px-1""
-                ></i>
+                <i class="fa fa-lock fa-2x absolute text-primary m-1 px-1"></i>
                 <input
                   id="password"
                   type="password"
@@ -98,16 +98,48 @@
                 />
               </div>
             </div>
+            <div class="mt-4 text-primary">
+              <div class="flex justify-between mx-8">
+                <label for="student"
+                  >I am a student
+                  <input
+                    class="mx-2"
+                    type="radio"
+                    name="role"
+                    value="student"
+                    checked="true"
+                    id="student"
+                  />
+                </label>
+                <label for="mentor"
+                  >I am a mentor
+                  <input
+                    class="mx-2"
+                    type="radio"
+                    name="role"
+                    value="mentor"
+                    id="mentor"
+                  />
+                </label>
+              </div>
+            </div>
             <div class="g-reCAPTCHA" data-sitekey="your_site_key"></div>
             <br />
             <div class="text-center my-3">
-             
-              <div class="g-recaptcha text-center" data-sitekey="6LcS9c4ZAAAAAPHISa63NZEj3TvZklqZqtY97p6s"></div>
-              <button class=" rounded bg-primary px-4 py-1 my-6 text-white font-bold text-center" 
-                submit>Register</button>
+              <div
+                class="g-recaptcha text-center"
+                data-sitekey="6LcS9c4ZAAAAAPHISa63NZEj3TvZklqZqtY97p6s"
+              ></div>
+              <button
+                class="rounded bg-primary px-4 py-1 my-6 text-white font-bold text-center"
+                submit
+              >
+                Register
+              </button>
               <br />
               <span class="text-sm">
-                Or <a href="./index.html" class="underline px-1 rounded">Login</a>
+                Or
+                <a href="./index.html" class="underline px-1 rounded">Login</a>
               </span>
             </div>
           </form>
@@ -122,6 +154,5 @@
         document.getElementById("demo-form").submit();
       }
     </script>
-
   </body>
 </html>

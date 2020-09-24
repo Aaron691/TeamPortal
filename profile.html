@@ -39,40 +39,70 @@
           </a>
         </div>
         <div class="border-r text-center">
-          <a href="./announcements.html" class="hover px-4 px-2">Home</a>
-        </div>
-        <div class="border-r text-center">
-          <a href="./my-hours.html" class="hover px-4 px-2">My Hours</a>
-        </div>
-        <div class="border-r text-center">
-          <a href="./submit-hours.html" class="hover px-4 px-2">
-            Submit Hours</a
+          <a href="./announcements.html" class="hover px-2 mx-2 rounded"
+            >Home</a
           >
         </div>
+        <div class="border-r text-center">
+          <a href="./my-hours.html" class="hover px-2 mx-2 rounded">My Hours</a>
+        </div>
+        <div class="border-r text-center">
+          <a href="./submit-hours.html" class="hover px-2 mx-2 rounded">
+            Submit Hours
+          </a>
+        </div>
         <div class="border-r">
-          <span class="hover px-4 px-2"> Outreach Sign-Up </span>
+          <span class="hover px-2 mx-2 rounded">
+            <a href="./outreach.html">Outreach Sign-Up</a>
+          </span>
         </div>
         <div class="border-r relative tooltips">
-          <div class="px-2 px-4 cursor-pointer" id="leadership">Leadership</div>
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
           <span
             class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
           >
             <ul>
-              <li class="border-b border-green-600 py-1 hover">Team Tracker</li>
-              <li class="border-b border-green-600 py-1 hover">Evaluation</li>
-              <li class="border-b border-green-600 py-1 hover">Reports</li>
-              <li class="border-b border-green-600 py-1 hover">Settings</li>
-              <li class="border-b border-green-600 py-1 hover">Outreach</li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/reports.html">Reports</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/settings.html"> Settings </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./leadership/outreach.html"> Outreach </a>
+              </li>
             </ul>
           </span>
         </div>
-        <div class="">
-          <span class="hover px-4"> Admin </span>
+        <div class="relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Admin
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./admin/team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./admin/mentor-tracker.html"> Mentor Tracker </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./admin/users.html"> Users </a>
+              </li>
+            </ul>
+          </span>
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
-        <div class="border-r px-2 text-xs" id="userFirstName">
-          <a href="./profile.html"> Joy Uehara </a>
+        <div class="border-r px-2 text-xs">
+          <a href="./profile.html" id="userFirstName"></a>
         </div>
         <div class="text-xs px-2">
           <a href="./index.html">Logout</a>
@@ -81,10 +111,27 @@
     </nav>
 
     <div class="p-4 px-8">
-      <h2 class="text-primary">Profile</h2>
+      <div class="flex justify-between">
+        <h2 class="text-primary">Profile</h2>
+        <label for="studentView"
+          >Student View
+          <input
+            type="checkbox"
+            name=""
+            id="studentView"
+            onclick="changeView()"
+        /></label>
+        <div>
+          <button
+            class="bg-primary text-white rounded px-4 py-1 font-semibold mentor-input"
+          >
+            DOWNLOAD HOURS
+          </button>
+        </div>
+      </div>
       <div class="flex border-b border-gray-300 my-1 py-1">
         <div class="font-bold w-70 w-64">Student Name</div>
-        <div>Joy Uehara</div>
+        <div id="name"></div>
       </div>
       <form onsubmit="return submitProfile()" method="POST">
         <div class="flex border-b border-gray-300 my-1 py-1">
@@ -101,7 +148,7 @@
             <option value="second">second</option>
           </select>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Current School<span class="text-red-500"> *</span>
           </div>
@@ -112,10 +159,12 @@
             id="currentSchool"
           >
             <option value="First">first</option>
-            <option value="second">second</option>
+            <option value="Togliatti State University">
+              Togliatti State University
+            </option>
           </select>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Current Grade<span class="text-red-500"> *</span>
           </div>
@@ -125,11 +174,13 @@
             class="w-64 border-b border-green-600"
             id="currentGrade"
           >
-            <option value="First">first</option>
-            <option value="second">second</option>
+            <option value="1">Freshman</option>
+            <option value="2">Sophmore</option>
+            <option value="3">Junior</option>
+            <option value="4">Senior</option>
           </select>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Current GPA<span class="text-red-500"> *</span>
           </div>
@@ -141,7 +192,7 @@
             class="border-b border-green-600 w-64"
           />
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             School in Eighth Grade<span class="text-red-500"> *</span>
           </div>
@@ -178,7 +229,7 @@
             id="cellPhone"
           />
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">Home Phone Number</div>
           <input
             type="tel"
@@ -186,7 +237,7 @@
             class="border-b border-green-600 w-64"
           />
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Address<span class="text-red-500"> *</span>
           </div>
@@ -207,19 +258,21 @@
             />
           </div>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="w-70"></div>
           <div class="w-64 flex overflow-hidden">
             <input
               type="text"
               required
               placeholder="State"
+              id="state"
               class="border-b border-green-600 w-24"
             />
             <input
               type="text"
               required
               placeholder="Zipcode"
+              id="zipcode"
               class="border-b border-green-600 ml-1"
             />
           </div>
@@ -238,7 +291,7 @@
             />
           </div>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Gender<span class="text-red-500"> *</span>
           </div>
@@ -254,7 +307,7 @@
             <option value="Withheld">Prefer not to answer</option>
           </select>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Main Race<span class="text-red-500"> *</span>
           </div>
@@ -277,7 +330,7 @@
             <option value="Withheld">Prefer not to answer</option>
           </select>
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1">
+        <div class="flex border-b border-gray-300 my-1 py-1 student-input">
           <div class="font-bold w-70">
             Ethnicity<span class="text-red-500"> *</span>
           </div>
@@ -287,8 +340,8 @@
             class="w-64 border-b border-green-600"
             id="ethnicity"
           >
-            <option value="White">Hispanic / Latino / Latina</option>
-            <option value="Black">Not Hispanic / Latino / Latina</option>
+            <option value="Hispanic">Hispanic / Latino / Latina</option>
+            <option value="Not Hispanic">Not Hispanic / Latino / Latina</option>
             <option value="Withheld">Prefer not to answer</option>
           </select>
         </div>
@@ -305,30 +358,125 @@
           <input
             type="text"
             class="border-b border-green-600 w-64"
-            id="dietaryRestrictions"
+            id="healthRestrictions"
           />
         </div>
-        <div class="flex border-b border-gray-300 my-1 py-1 items-center">
+        <div class="flex border-b border-gray-300 my-1 py-1 mentor-input">
+          <div class="h-4"></div>
+        </div>
+        <!-- mentor input -->
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">FIRST Registration (STIMS)</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label for="yesConsent" class="m-0">
+              <input type="radio" name="STIMSRegistration" value="yes" />
+              I consent
+            </label>
+            <label for="noConsent" class="m-0">
+              <input type="radio" name="STIMSRegistration" value="no" />
+              I do not consent
+            </label>
+          </div>
+        </div>
+
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">
+            Consent for Volunteer Handbook<span class="text-red-500"> *</span>
+          </div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label class="m-0">
+              <input type="radio" name="volunteerHandbook" value="yes" />
+              I consent
+            </label>
+            <label for="noConsent" class="m-0">
+              <input type="radio" name="volunteerHandbook" value="no" />
+              I do not consent
+            </label>
+          </div>
+        </div>
+
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">TB Assessment Completion</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label for="yesConsent" class="m-0">
+              <input type="radio" name="tbAssessment" value="yes" />
+              Completed
+            </label>
+            <label for="noConsent" class="m-0">
+              <input type="radio" name="tbAssessment" value="no" />
+              Not completed
+            </label>
+          </div>
+        </div>
+
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">Voluntary Waiver Completion</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label class="m-0">
+              <input type="radio" name="voluntaryWaiver" value="yes" />
+              Completed
+            </label>
+            <label class="m-0">
+              <input type="radio" name="voluntaryWaiver" value="no" />
+              Not completed
+            </label>
+          </div>
+        </div>
+
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">Live Scan Completion</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label class="m-0">
+              <input type="radio" name="liveScan" value="yes" />
+              Completed
+            </label>
+            <label class="m-0">
+              <input type="radio" name="liveScan" value="no" />
+              Not completed
+            </label>
+          </div>
+        </div>
+
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">DV Volunteer Handbook Signature</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <label for="yesConsent" class="m-0">
+              <input type="radio" name="dvHandbookSignature" value="yes" />
+              Completed
+            </label>
+            <label for="noConsent" class="m-0">
+              <input type="radio" name="dvHandbookSignature" value="no" />
+              Not completed
+            </label>
+          </div>
+        </div>
+        <!-- end mentor input -->
+
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center student-input"
+        >
           <div class="font-bold w-70">
             Consent for Handbook<span class="text-red-500"> *</span>
           </div>
           <div class="grid grid-cols-2 w-64 text-sm">
             <label for="yesConsent" class="m-0">
-              <input
-                type="radio"
-                name="studentConsent"
-                value="I Consent"
-                id="yesConsent"
-              />
+              <input type="radio" name="studentConsent" value="yes" />
               I consent
             </label>
             <label for="noConsent" class="m-0">
-              <input
-                type="radio"
-                name="studentConsent"
-                value="No Consent"
-                id="noConsent"
-              />
+              <input type="radio" name="studentConsent" value="no" />
               I do not consent
             </label>
           </div>
@@ -336,7 +484,9 @@
         <div class="flex border-b border-gray-300 my-1 py-1">
           <div class="h-4"></div>
         </div>
-        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+        <div
+          class="grid grid-cols-2 border-b border-gray-300 my-1 py-1 student-input"
+        >
           <div>
             <div class="font-bold w-70">Parent / Guardian 1</div>
             <div></div>
@@ -345,7 +495,9 @@
             <div class="font-bold w-70">Parent / Guardian 2</div>
           </div>
         </div>
-        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+        <div
+          class="grid grid-cols-2 border-b border-gray-300 my-1 py-1 student-input"
+        >
           <div class="flex">
             <div class="font-bold w-70">
               Name<span class="text-red-500"> *</span>
@@ -366,7 +518,9 @@
             />
           </div>
         </div>
-        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+        <div
+          class="grid grid-cols-2 border-b border-gray-300 my-1 py-1 student-input"
+        >
           <div class="flex">
             <div class="font-bold w-70">
               Email<span class="text-red-500"> *</span>
@@ -387,7 +541,9 @@
             />
           </div>
         </div>
-        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+        <div
+          class="grid grid-cols-2 border-b border-gray-300 my-1 py-1 student-input"
+        >
           <div class="flex">
             <div class="font-bold w-70">
               Phone Number<span class="text-red-500"> *</span>
@@ -408,28 +564,20 @@
             />
           </div>
         </div>
-        <div class="grid grid-cols-2 border-b border-gray-300 my-1 py-1">
+        <div
+          class="grid grid-cols-2 border-b border-gray-300 my-1 py-1 student-input"
+        >
           <div class="flex">
             <div class="font-bold w-70">
               Consent for Handbook<span class="text-red-500"> *</span>
             </div>
             <div class="grid grid-cols-2 w-70 text-sm">
               <label for="yesConsent" class="m-0">
-                <input
-                  type="radio"
-                  name="studentConsent"
-                  value="I Consent"
-                  id="yesConsent"
-                />
+                <input type="radio" name="parent1Consent" value="yes" />
                 I consent
               </label>
               <label for="noConsent" class="m-0">
-                <input
-                  type="radio"
-                  name="studentConsent"
-                  value="No Consent"
-                  id="noConsent"
-                />
+                <input type="radio" name="parent1Consent" value="no" />
                 I do not consent
               </label>
             </div>
@@ -438,26 +586,42 @@
             <div class="font-bold w-70">Consent for Handbook</div>
             <div class="grid grid-cols-2 w-70 text-sm">
               <label for="yesConsent" class="m-0">
-                <input
-                  type="radio"
-                  name="studentConsent"
-                  value="I Consent"
-                  id="yesConsent"
-                />
+                <input type="radio" name="parent2Consent" value="yes" />
                 I consent
               </label>
               <label for="noConsent" class="m-0">
-                <input
-                  type="radio"
-                  name="studentConsent"
-                  value="No Consent"
-                  id="noConsent"
-                />
+                <input type="radio" name="parent2Consent" value="no" />
                 I do not consent
               </label>
             </div>
           </div>
         </div>
+        <!-- Mentor inputs -->
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">Total Fall Hours</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <div id="totalFallHours"></div>
+          </div>
+        </div>
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">Total Spring Hours</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <div id="totalSpringHours"></div>
+          </div>
+        </div>
+        <div
+          class="flex border-b border-gray-300 my-1 py-1 items-center mentor-input"
+        >
+          <div class="font-bold w-70">Total Hours</div>
+          <div class="grid grid-cols-2 w-64 text-sm">
+            <div id="totalHours"></div>
+          </div>
+        </div>
+        <!-- End mentor inputs -->
         <div class="text-sm text-red-500">
           (Fields marked with * are required)
         </div>
@@ -474,5 +638,157 @@
 
     <footer></footer>
     <script src="./scripts.js"></script>
+    <script>
+      function initializePage() {
+        document.getElementById("name").innerHTML = currentStudent.name;
+        document.getElementById("email").value = currentStudent.personal_email;
+        document.getElementById("cellPhone").value = currentStudent.cell_phone;
+        document.getElementById("birthDate").value = new Date(
+          currentStudent.birthdate
+        ).toISOString();
+        document.getElementById("dietaryRestrictions").value =
+          currentStudent.dietary_restrictions;
+        document.getElementById("healthRestrictions").value =
+          currentStudent.health_restrictions;
+        let consent;
+
+        if (currentStudent.student) {
+          //go through and set up page for student view
+          const mentorClasses = document.getElementsByClassName("mentor-input");
+          for (let i = 0; i < mentorClasses.length; i++) {
+            mentorClasses[i].style.display = "none";
+          }
+
+          //go through and set student specific values
+          document.getElementById("homePhone").value =
+            currentStudent.home_phone;
+          document.getElementById("address").value = currentStudent.street;
+          document.getElementById("city").value = currentStudent.city;
+          document.getElementById("state").value = currentStudent.state;
+          document.getElementById("zipcode").value = currentStudent.zipcode;
+          document.getElementById("gender").value = currentStudent.gender;
+          document.getElementById("race").value = currentStudent.race;
+          document.getElementById("ethnicity").value = currentStudent.ethnicity;
+          document.getElementById("currentSchool").value =
+            currentStudent.current_school;
+          document.getElementById("currentGrade").value =
+            currentStudent.current_grade;
+          document.getElementById("currentGpa").value =
+            currentStudent.current_gpa;
+          document.getElementById("eightGradeSchool").value =
+            currentStudent.eighth_grade_school;
+          consent = document.getElementsByName("studentConsent");
+          currentStudent.student_consent
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          document.getElementById("parent1Name").value =
+            currentStudent.parent_one.name;
+          document.getElementById("parent1Email").value =
+            currentStudent.parent_one.email;
+          document.getElementById("parent1Phone").value =
+            currentStudent.parent_one.phone;
+
+          consent = document.getElementsByName("parent1Consent");
+          currentStudent.parent_one.consent
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          //if there is a second parent
+          if (currentStudent.parent_two) {
+            document.getElementById("parent2Name").value =
+              currentStudent.parent_two.name;
+            document.getElementById("parent2Email").value =
+              currentStudent.parent_two.email;
+            document.getElementById("parent2Phone").value =
+              currentStudent.parent_two.phone;
+            consent = document.getElementsByName("parent2Consent");
+            currentStudent.parent_two.consent
+              ? (consent[0].checked = true)
+              : (consent[1].checked = true);
+          }
+        } else {
+          //go through and set up page for mentor view
+          const studentClasses = document.getElementsByClassName(
+            "student-input"
+          );
+          for (let i = 0; i < studentClasses.length; i++) {
+            studentClasses[i].style.display = "none";
+          }
+
+          consent = document.getElementsByName("STIMSRegistration");
+          currentStudent.stims_registration
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          consent = document.getElementsByName("volunteerHandbook");
+          currentStudent.volunteer_hadbook
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          consent = document.getElementsByName("tbAssessment");
+          currentStudent.tb_assessment
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          consent = document.getElementsByName("voluntaryWaiver");
+          currentStudent.voluntary_waiver
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          consent = document.getElementsByName("liveScan");
+          currentStudent.live_scan
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          consent = document.getElementsByName("dvHandbookSignature");
+          currentStudent.dv_handbook_signature
+            ? (consent[0].checked = true)
+            : (consent[1].checked = true);
+
+          document.getElementById("totalFallHours").innerHTML =
+            currentStudent.hours.fall.total;
+          document.getElementById("totalSpringHours").innerHTML =
+            currentStudent.hours.spring.total;
+          document.getElementById("totalHours").innerHTML =
+            currentStudent.hours.spring.total + currentStudent.hours.fall.total;
+        }
+      }
+
+      function changeView() {
+        if (currentStudent.student) {
+          currentStudent = studentData[16];
+        } else {
+          currentStudent = studentData[2];
+        }
+
+        if (currentStudent.student) {
+          const studentClasses = document.getElementsByClassName(
+            "student-input"
+          );
+          for (let i = 0; i < studentClasses.length; i++) {
+            studentClasses[i].style.display = "flex";
+          }
+          const mentorClasses = document.getElementsByClassName("mentor-input");
+          for (let i = 0; i < mentorClasses.length; i++) {
+            mentorClasses[i].style.display = "none";
+          }
+        } else {
+          const studentClasses = document.getElementsByClassName(
+            "student-input"
+          );
+          for (let i = 0; i < studentClasses.length; i++) {
+            studentClasses[i].style.display = "none";
+          }
+          const mentorClasses = document.getElementsByClassName("mentor-input");
+          for (let i = 0; i < mentorClasses.length; i++) {
+            mentorClasses[i].style.display = "flex";
+          }
+        }
+        initializePage();
+      }
+
+      window.onload = initializePage();
+    </script>
   </body>
 </html>

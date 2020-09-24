@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Robotics</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./../styles.css" />
+  </head>
+
+  <body>
+    <nav class="w-full bg-gray-900 text-white relative">
+      <div class="w-full bg-primary h-3"></div>
+
+      <div class="px-10 flex items-center relative h-12 text-sm lg:text-base">
+        <div class="bg-gray-900">
+          <a href="./../announcements.html">
+            <img src="./../assets/logo.png" width="45" alt="" />
+          </a>
+        </div>
+        <div class="border-r text-center">
+          <a href="./../announcements.html" class="hover px-2 mx-2 rounded"
+            >Home</a
+          >
+        </div>
+        <div class="border-r text-center">
+          <a href="./../my-hours.html" class="hover px-2 mx-2 rounded"
+            >My Hours</a
+          >
+        </div>
+        <div class="border-r text-center">
+          <a href="./../submit-hours.html" class="hover px-2 mx-2 rounded">
+            Submit Hours
+          </a>
+        </div>
+        <div class="border-r">
+          <span class="hover px-2 mx-2 rounded">
+            <a href="./../outreach.html">Outreach Sign-Up</a>
+          </span>
+        </div>
+        <div class="border-r relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Leadership
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./reports.html">Reports</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./settings.html"> Settings </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./outreach.html"> Outreach </a>
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="relative tooltips">
+          <div class="px-2 mx-2 rounded cursor-pointer" id="leadership">
+            Admin
+          </div>
+          <span
+            class="absolute bg-gray-900 p-2 rounded-lg w-32 text-center tooltiptext"
+          >
+            <ul>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./../admin/team-tracker.html">Team Tracker</a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./../admin/mentor-tracker.html"> Mentor Tracker </a>
+              </li>
+              <li class="border-b border-green-600 py-1 hover rounded">
+                <a href="./../admin/users.html"> Users </a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <div class="absolute right-1 top-1 flex">
+        <div class="border-r px-2 text-xs" id="userFirstName">
+          <a href="./../profile.html"> Joy Uehara </a>
+        </div>
+        <div class="text-xs px-2">
+          <a href="./../index.html">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <footer></footer>
+    <script src="./../scripts.js"></script>
+  </body>
+</html>
