@@ -180,6 +180,8 @@
         </div>
       </div>
       <!-- End of profile modal -->
+
+      <!-- Start of hours modal -->
       <div class="fixed w-full h-screen hidden" id="hours-modal">
         <div
           class="mx-auto border-2 border-green-600 rounded-lg w-5/6 lg:w-1/2 bg-white shadow p-4 overflow-y-auto overflow-x-hidden max-h-3"
@@ -322,6 +324,7 @@
           />
         </label>
       </div>
+      <!-- Start of table -->
       <div class="border-t border-green-600">
         <div
           class="border-b border-green-600 grid grid-cols-10 font-bold text-sm text-center"
@@ -337,7 +340,10 @@
           <div>Waiver</div>
         </div>
       </div>
-      <div id="list-container"></div>
+      <div id="list-container">
+        <!-- This data is built from initialize Page -->
+      </div>
+      <!-- End of table -->
     </div>
 
     <footer></footer>
@@ -348,7 +354,9 @@
         const students = studentData.filter((el) => {
           return el.student;
         });
+
         students.forEach((el) => {
+          //go through all of the users and only make a row, this only goes through the users that are marked as students.
           listData += `
             <div class="border-b border-green-600 grid grid-cols-10 gap-2 text-center py-2">
               <div class="col-span-2 text-left">${el.name}</div>
@@ -356,10 +364,18 @@
               <button onclick="showHours(${el._id})">Show</button>
               <div class="overflow-hidden">${el.personal_email}</div>
               <div>${el.directorate}</div>
-              <div>${el.preseason_permission_slip}</div>
-              <div>${el.competitions_permission_slip}</div>
-              <div>${el.stims_registration}</div>
-              <div>${el.student_consent}</div>
+              <div><input type="checkbox" disabled ${
+                el.preseason_permission_slip ? "checked" : null
+              }/></div>
+              <div><input type="checkbox" disabled ${
+                el.competitions_permission_slip ? "checked" : null
+              }/></div>
+              <div><input type="checkbox" disabled ${
+                el.stims_registration ? "checked" : null
+              }/></div>
+              <div><input type="checkbox" disabled ${
+                el.student_consent ? "checked" : null
+              }/></div>
             </div>
           `;
         });
