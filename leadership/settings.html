@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Robotics</title>
+    <title>Robotics - Settings</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -103,8 +103,8 @@
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
-        <div class="border-r px-2 text-xs" id="userFirstName">
-          <a href="./../profile.html"> Joy Uehara </a>
+        <div class="border-r px-2 text-xs">
+          <a href="./../profile.html" id="userFirstName"> Joy Uehara </a>
         </div>
         <div class="text-xs px-2">
           <a href="./../index.html">Logout</a>
@@ -112,49 +112,52 @@
       </div>
     </nav>
 
+    <div class="p-8">
+      <div>
+        <h2 class="text-primary">Settings</h2>
+      </div>
+      <div>
+        <div class="text-primary font-bold">Hours Type:</div>
+        <div>Team Meeting</div>
+        <div>Project Work</div>
+        <div>Outreach</div>
+        <div>Competition</div>
+        <div>Training</div>
+        <button class="px-1 my-1 bg-primary text-white rounded">
+          Add Fields
+        </button>
+        <br />
+        <br />
+        <div class="text-primary font-bold">Team Tracker Checkboxes:</div>
+        <div>Preseason Permission Slip</div>
+        <div>Competitions Permission Slip</div>
+        <div>Waiver</div>
+        <button class="px-1 my-1 bg-primary text-white rounded">
+          Add Fields
+        </button>
+        <br />
+        <br />
+        <div class="text-primary font-bold">Directorates:</div>
+        <div>Controls</div>
+        <div>Mechanical</div>
+        <div>Business</div>
+        <div>Systems</div>
+        <button class="px-1 my-1 bg-primary text-white rounded">
+          Add Fields
+        </button>
+        <br />
+        <br />
+        <div class="text-primary font-bold">Schools:</div>
+        <div>Da Vinci Science</div>
+        <div>Da Vinci Design</div>
+        <div>Da Vinci Communications</div>
+        <div>Da Vinci Connect</div>
+        <button class="px-1 my-1 bg-primary text-white rounded">
+          Add Fields
+        </button>
+      </div>
+    </div>
     <footer></footer>
     <script src="./../scripts.js"></script>
-    <script>
-      function setData() {
-        let announcementData = "";
-        //the Announcements variable is inside of the scripts.js file
-        //this loop will go through each item in the announcements array and create the designs.
-        announcements.forEach(function (el) {
-          announcementData += `<div class="my-4">
-            <div class="grid grid-cols-4 text-sm my-1">
-              <strong class="text-primary text-base">${el.name}</strong>
-              <div class="">${el.date}</div>
-              <div>${el.time}</div>
-            </div>
-            <div>
-             ${el.content}
-            </div>
-          </div>`;
-        });
-
-        let eventsData = "";
-        events.forEach(function (el) {
-          const date = new Date(el.date);
-          console.log(date);
-          eventsData += `
-          <div class="grid grid-cols-7">
-            <div class="flex flex-col text-center border-r border-b border-green-600 col-span-2 lg:col-span-1">
-              <div>Tuesday</div>
-              <div class="font-semibold text-primary">${date.getDate()}</div>
-              <div>September</div>
-            </div>
-            <div class="col-span-5 lg:col-span-6 border-b border-green-600 flex flex-col px-2 text-sm">
-              <div class="font-semibold">${el.title}</div>
-              <div>${el.date} ${el.time}</div>
-              <div>Location: ${el.location}</div>
-            </div>
-          </div>`;
-        });
-        document.getElementById("events").innerHTML = eventsData;
-
-        document.getElementById("announcements").innerHTML = announcementData;
-      }
-      window.onload = setData;
-    </script>
   </body>
 </html>

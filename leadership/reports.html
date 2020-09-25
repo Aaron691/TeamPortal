@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Robotics</title>
+    <title>Robotics - Report</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -103,8 +103,8 @@
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
-        <div class="border-r px-2 text-xs" id="userFirstName">
-          <a href="./../profile.html"> Joy Uehara </a>
+        <div class="border-r px-2 text-xs">
+          <a href="./../profile.html" id="userFirstName"> Joy Uehara </a>
         </div>
         <div class="text-xs px-2">
           <a href="./../index.html">Logout</a>
@@ -112,49 +112,65 @@
       </div>
     </nav>
 
+    <div class="p-8">
+      <h2 class="text-primary">Report Generator</h2>
+      <div>
+        <div class="text-sm">
+          Select Demographic to Generate a Pi Chart for
+          <select name="" class="border rounded px-4">
+            <option value="gender">Gender</option>
+          </select>
+        </div>
+        <div
+          class="border-2 shadow rounded-lg border-green-600 w-96 h-96 p-2 my-2"
+        >
+          <div id="chart-name" class="font-semi-bold">Gender</div>
+          <canvas id="myChart" width="400"></canvas>
+        </div>
+        <div class="text-center w-96 my-4">
+          <button class="bg-primary rounded text-white py-2 px-4">
+            DOWNLOAD
+          </button>
+        </div>
+      </div>
+    </div>
+
     <footer></footer>
     <script src="./../scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script>
-      function setData() {
-        let announcementData = "";
-        //the Announcements variable is inside of the scripts.js file
-        //this loop will go through each item in the announcements array and create the designs.
-        announcements.forEach(function (el) {
-          announcementData += `<div class="my-4">
-            <div class="grid grid-cols-4 text-sm my-1">
-              <strong class="text-primary text-base">${el.name}</strong>
-              <div class="">${el.date}</div>
-              <div>${el.time}</div>
-            </div>
-            <div>
-             ${el.content}
-            </div>
-          </div>`;
-        });
-
-        let eventsData = "";
-        events.forEach(function (el) {
-          const date = new Date(el.date);
-          console.log(date);
-          eventsData += `
-          <div class="grid grid-cols-7">
-            <div class="flex flex-col text-center border-r border-b border-green-600 col-span-2 lg:col-span-1">
-              <div>Tuesday</div>
-              <div class="font-semibold text-primary">${date.getDate()}</div>
-              <div>September</div>
-            </div>
-            <div class="col-span-5 lg:col-span-6 border-b border-green-600 flex flex-col px-2 text-sm">
-              <div class="font-semibold">${el.title}</div>
-              <div>${el.date} ${el.time}</div>
-              <div>Location: ${el.location}</div>
-            </div>
-          </div>`;
-        });
-        document.getElementById("events").innerHTML = eventsData;
-
-        document.getElementById("announcements").innerHTML = announcementData;
-      }
-      window.onload = setData;
+      const ctx = document.getElementById("myChart").getContext("2d");
+      let data = {
+        datasets: [
+          {
+            data: [10, 20, 30],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+        labels: ["Red", "Yellow", "Blue"],
+      };
+      let options = {};
+      const myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: data,
+        options: options,
+      });
     </script>
   </body>
 </html>

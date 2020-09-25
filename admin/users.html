@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Robotics</title>
+    <title>Robotics - Users</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -103,16 +103,48 @@
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
-        <div class="border-r px-2 text-xs" id="userFirstName">
-          <a href="./../profile.html"> Joy Uehara </a>
+        <div class="border-r px-2 text-xs">
+          <a href="./../profile.html" id="userFirstName"> Joy Uehara </a>
         </div>
         <div class="text-xs px-2">
           <a href="./../index.html">Logout</a>
         </div>
       </div>
     </nav>
-
+    <div class="p-8">
+      <div class="justify-between flex">
+        <h2 class="text-primary">Users</h2>
+        <div class="">
+          <button class="bg-primary text-white px-4 py-1 rounded">
+            MERGE USERS
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-6 font-bold border-b border-green-600 mb-2">
+        <div class="col-span-2">Name</div>
+        <div class="col-span-2">Email</div>
+        <div>Account Type</div>
+        <div>Access Type</div>
+      </div>
+      <div class="grid grid-cols-6 row-gap-2" id="list"></div>
+    </div>
     <footer></footer>
     <script src="./../scripts.js"></script>
+    <script>
+      function initializePage() {
+        let listData = "";
+        studentData.forEach((el) => {
+          listData += `
+            <div class="col-span-2 border-b border-green-600">${el.name}</div>
+            <div class="col-span-2 border-b border-green-600">${el.personal_email}</div>
+            <div class="border-b border-green-600">${el.account_type}</div>
+            <div class="border-b border-green-600">${el.access_type}</div>
+          `;
+        });
+        document.getElementById("list").innerHTML = listData;
+      }
+
+      window.onload = initializePage();
+    </script>
   </body>
 </html>

@@ -26,7 +26,7 @@ h1 {
 
 h2 {
   display: block;
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin-top: 0.83em;
   margin-bottom: 0.83em;
   margin-left: 0;
@@ -83,7 +83,7 @@ a.bg-primary:focus {
 button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: black !important;
-  color: #116625 !important;
+  color: white !important;
 }
 
 .input-container input {
@@ -137,4 +137,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .max-h-3 {
   max-height: 75%;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.w-96 {
+  width: 24rem;
 }

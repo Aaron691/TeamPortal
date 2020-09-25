@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Robotics</title>
+    <title>Robotics - Team Tracker</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,16 +67,16 @@
           >
             <ul>
               <li class="border-b border-green-600 py-1 hover rounded">
-                <a href="./leadership/team-tracker.html">Team Tracker</a>
+                <a href="./../leadership/team-tracker.html">Team Tracker</a>
               </li>
               <li class="border-b border-green-600 py-1 hover rounded">
-                <a href="./leadership/reports.html">Reports</a>
+                <a href="./../leadership/reports.html">Reports</a>
               </li>
               <li class="border-b border-green-600 py-1 hover rounded">
-                <a href="./leadership/settings.html"> Settings </a>
+                <a href="./../leadership/settings.html"> Settings </a>
               </li>
               <li class="border-b border-green-600 py-1 hover rounded">
-                <a href="./leadership/outreach.html"> Outreach </a>
+                <a href="./../leadership/outreach.html"> Outreach </a>
               </li>
             </ul>
           </span>
@@ -103,8 +103,8 @@
         </div>
       </div>
       <div class="absolute right-1 top-1 flex">
-        <div class="border-r px-2 text-xs" id="userFirstName">
-          <a href="./../profile.html"> Joy Uehara </a>
+        <div class="border-r px-2 text-xs">
+          <a href="./../profile.html" id="userFirstName"> Joy Uehara </a>
         </div>
         <div class="text-xs px-2">
           <a href="./../index.html">Logout</a>
@@ -112,8 +112,178 @@
       </div>
     </nav>
 
+    <div class="p-8 relative">
+      <div class="flex justify-between items-center">
+        <h2 class="text-primary">Team Tracker</h2>
+        <div>
+          <button class="bg-primary text-white py-1 px-4 rounded">
+            TRACKER DOWNLOAD
+          </button>
+          <button
+            class="bg-primary text-white py-1 px-4 rounded"
+            onclick="showSeasonModal()"
+          >
+            NEW SEASON
+          </button>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="absolute w-full hidden" id="season-modal">
+        <div
+          class="mx-auto border-2 border-green-600 rounded-lg w-2/3 md:w-1/3 bg-white shadow p-4 overflow-x-hidden"
+        >
+          <div class="text-center font-bold">
+            Are you sure you want to start a new season?
+          </div>
+          <div class="font-bold">This will:</div>
+          <ul class="list-disc list-inside text-sm">
+            <li>Download the <i>entire tracker</i> as an excel file</li>
+            <li>Clear all consents (student and both parents)</li>
+            <li>Clear all hours/requirements data</li>
+            <li>
+              Clear 'Team Tracker Checkboxes' from Hours Log Page in Leadership
+            </li>
+            <li>Clear GPA field on students' profiles</li>
+            <li>
+              Add 1 to all grades of student users (if currently 12, make their
+              user status Student (Alumni))
+            </li>
+          </ul>
+          <div class="flex justify-between px-8 my-4">
+            <button class="bg-primary text-white rounded py-1 px-4 border">
+              Yes
+            </button>
+            <button
+              class="bg-red-800 text-white rounded py-1 px-4 border hover:bg-black"
+              onclick="closeSeasonModal()"
+            >
+              No
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal -->
+      <!-- For this section all secondary fields are populated in the function initialize page. -->
+      <div class="text-sm">
+        <div class="flex">
+          <div class="font-bold w-70">Name</div>
+          <div id="name"></div>
+        </div>
+        <br />
+        <div class="flex">
+          <div class="w-70">Street Address</div>
+          <div id="address"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">City</div>
+          <div id="city"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">State</div>
+          <div id="state"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Zip Code</div>
+          <div id="zipcode"></div>
+        </div>
+        <br />
+        <div class="flex">
+          <div class="w-70">Total Hours</div>
+          <div id="total-hours"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Outreach Hours</div>
+          <div id="outreach-hours"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Zoom Team Meeting Attendance</div>
+          <div id="zoom-attendance"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Directorate Meeting Attendance</div>
+          <div id="directorate-attendance"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Quad Chart Completion</div>
+          <div id="quad-chart"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Registered on STIMS</div>
+          <div id="stims"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Valid Academic Standing</div>
+          <div id="valid-standing"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Director Evaluation Complete</div>
+          <div id="director-evaluation"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Mentor Evaluation Complete</div>
+          <div id="mentor-evaluation"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Completed Induction Requirements</div>
+          <div id="induction"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Travel to Champs</div>
+          <div id="champs"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Completed Champs Travel Survey</div>
+          <div id="champs-survey"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Documentary Waiver</div>
+          <div id="documentary"></div>
+        </div>
+        <div class="flex">
+          <div class="w-70">Competition Permission Slips</div>
+          <div id="competition-slip"></div>
+        </div>
+        <br />
+        <div class="font-bold">Buid Season Hours:</div>
+        <div>Week 1 <span class="build"></span></div>
+        <div>Week 2 <span class="build"></span></div>
+        <div>Week 3 <span class="build"></span></div>
+        <div>Week 4 <span class="build"></span></div>
+        <div>Week 5 <span class="build"></span></div>
+        <div>Week 6 <span class="build"></span></div>
+        <br />
+        <div class="font-bold">Competition Season Hours:</div>
+        <div>Week .5 <span class="competition"></span></div>
+        <div>Week 1 <span class="competition"></span></div>
+        <div>Week 2 <span class="competition"></span></div>
+        <div>Week 3 <span class="competition"></span></div>
+        <div>Week 4 <span class="competition"></span></div>
+        <div>Week 5 <span class="competition"></span></div>
+        <div>Week 6 <span class="competition"></span></div>
+        <div>Week 7 <span class="competition"></span></div>
+        <div>Champs <span class="competition"></span></div>
+      </div>
+    </div>
     <footer></footer>
     <script src="./../scripts.js"></script>
-    <script></script>
+    <script>
+      function showSeasonModal() {
+        document.getElementById("season-modal").classList.remove("hidden");
+      }
+
+      function closeSeasonModal() {
+        document.getElementById("season-modal").classList.add("hidden");
+      }
+
+      function initializePage() {
+        document.getElementById("name").innerHTML = currentStudent.name;
+        document.getElementById("address").innerHTML = currentStudent.street;
+        document.getElementById("city").innerHTML = currentStudent.city;
+        document.getElementById("state").innerHTML = currentStudent.state;
+        document.getElementById("zipcode").innerHTML = currentStudent.zipcode;
+      }
+
+      window.onload = initializePage();
+    </script>
   </body>
 </html>

@@ -143,6 +143,8 @@ const studentData = [
       consent: true,
     },
     parent_two: null,
+    account_type: "Student",
+    access_type: "Normal",
     student: true,
   },
   {
